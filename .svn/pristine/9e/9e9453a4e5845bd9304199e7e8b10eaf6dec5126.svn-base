@@ -1,0 +1,1 @@
+-ggdb -O0 -DDEBUG=1 -ffunction-sections -fdata-sections  

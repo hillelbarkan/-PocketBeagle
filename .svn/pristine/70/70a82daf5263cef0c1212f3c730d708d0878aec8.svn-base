@@ -1,0 +1,875 @@
+              gdb --interpreter mi --args "/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/../VisualGDB/Debug/Lighting_Control_For_The_Garden"
+[       0 ms] =thread-group-added,id="i1"
+[       0 ms] =thread-group-added,id="i1"
+[       0 ms] -gdb-version
+[       1 ms] ~"GNU gdb (Debian 7.12-6) 7.12.0.20161007-git\n"
+[       3 ms] ~"Copyright (C) 2016 Free Software Foundation, Inc.\n"
+[       4 ms] ~"License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.  Type \"show copying\"\nand \"show warranty\" for details.\n"
+[       5 ms] ~"This GDB was configured as \"arm-linux-gnueabihf\".\nType \"show configuration\" for configuration details."
+[       5 ms] ~"\nFor bug reporting instructions, please see:\n"
+[       6 ms] ~"<http://www.gnu.org/software/gdb/bugs/>.\n"
+[       7 ms] ~"Find the GDB manual and other documentation resources online at:\n<http://www.gnu.org/software/gdb/documentation/>.\n"
+[       9 ms] ~"For help, type \"help\".\n"
+[       9 ms] ~"Type \"apropos word\" to search for commands related to \"word\"...\n"
+[      13 ms] ~"Reading symbols from /tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/../VisualGDB/Debug/Lighting_Control_For_The_Garden..."
+[      21 ms] ~"done.\n"
+[      27 ms] ~"GNU gdb (Debian 7.12-6) 7.12.0.20161007-git\n"
+[      27 ms] ~"Copyright (C) 2016 Free Software Foundation, Inc.\n"
+[      29 ms] ~"License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.  Type \"show copying\"\nand \"show warranty\" for details.\n"
+[      29 ms] ~"This GDB was configured as \"arm-linux-gnueabihf\".\nType \"show configuration\" for configuration details."
+[      30 ms] ~"\nFor bug reporting instructions, please see:\n"
+[      32 ms] ~"<http://www.gnu.org/software/gdb/bugs/>.\n"
+[      33 ms] ~"Find the GDB manual and other documentation resources online at:\n<http://www.gnu.org/software/gdb/documentation/>.\n"
+[      34 ms] ~"For help, type \"help\".\n"
+[      34 ms] ~"Type \"apropos word\" to search for commands related to \"word\".\n"
+[      34 ms] ^done
+[      34 ms] -list-features
+[      38 ms] ^done,features=["frozen-varobjs","pending-breakpoints","thread-info","data-read-memory-bytes","breakpoint-notifications","ada-task-info","language-option","info-gdb-mi-command","undefined-command-error-code","exec-run-start-option","python"]
+[      38 ms] -gdb-set disassembly-flavor intel
+[      41 ms] ^error,msg="No symbol \"disassembly\" in current context."
+[      41 ms] -gdb-set print demangle off
+[      43 ms] ^done
+[      44 ms] -break-insert -f main
+[      48 ms] ^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x00000a2a",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="10",thread-groups=["i1"],times="0",original-location="main"}
+[     108 ms] -inferior-tty-set /dev/pts/1
+[     109 ms] ^done
+[     120 ms] info target
+[     122 ms] &"info target\n"
+[     124 ms] ~"Symbols from \"/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/VisualGDB/Debug/Lighting_Control_For_The_Garden\".\n"
+[     124 ms] ~"Local exec file:\n"
+[     124 ms] ~"\t`/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/VisualGDB/Debug/Lighting_Control_For_The_Garden', file type elf32-littlearm.\n"
+[     125 ms] ~"\tEntry point: 0x698\n"
+[     125 ms] ~"\t0x00000154 - 0x0000016d is .interp\n"
+[     126 ms] ~"\t0x00000170 - 0x00000190 is .note.ABI-tag\n"
+[     127 ms] ~"\t0x00000190 - 0x000001b4 is .note.gnu.build-id\n"
+[     127 ms] ~"\t0x000001b4 - 0x000001e0 is .gnu.hash\n"
+[     127 ms] ~"\t0x000001e0 - 0x00000370 is .dynsym\n"
+[     128 ms] ~"\t0x00000370 - 0x00000498 is .dynstr\n"
+[     129 ms] ~"\t0x00000498 - 0x000004ca is .gnu.version\n"
+[     129 ms] ~"\t0x000004cc - 0x000004ec is .gnu.version_r\n"
+[     130 ms] ~"\t0x000004ec - 0x0000054c is .rel.dyn\n"
+[     130 ms] ~"\t0x0000054c - 0x000005c4 is .rel.plt\n"
+[     131 ms] ~"\t0x000005c4 - 0x000005d0 is .init\n"
+[     131 ms] ~"\t0x000005d0 - 0x00000698 is .plt\n"
+[     132 ms] ~"\t0x00000698 - 0x00000b98 is .text\n"
+[     132 ms] ~"\t0x00000b98 - 0x00000ba0 is .fini\n"
+[     133 ms] ~"\t0x00000ba0 - 0x00000db6 is .rodata\n"
+[     133 ms] ~"\t0x00000db8 - 0x00000dc0 is .ARM.exidx\n"
+[     134 ms] ~"\t0x00000dc0 - 0x00000dc4 is .eh_frame\n"
+[     134 ms] ~"\t0x00010ee4 - 0x00010ee8 is .init_array\n"
+[     135 ms] ~"\t0x00010ee8 - 0x00010eec is .fini_array\n"
+[     135 ms] ~"\t0x00010eec - 0x00010ef0 is .jcr\n"
+[     136 ms] ~"\t0x00010ef0 - 0x00011000 is .dynamic\n"
+[     136 ms] ~"\t0x00011000 - 0x0001106c is .got\n"
+[     137 ms] ~"\t0x0001106c - 0x00011070 is .data\n"
+[     137 ms] ~"\t0x00011070 - 0x00011074 is .bss\n"
+[     137 ms] ^done
+[     139 ms] -break-insert -f /tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34
+[     145 ms] ^done,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00000ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="0",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[     145 ms] -break-after 2 0
+[     146 ms] ^done
+[     146 ms] info symbol 0xac4
+[     148 ms] &"info symbol 0xac4\n"
+[     149 ms] ~"main + 168 in section .text\n"
+[     149 ms] ^done
+[     149 ms] info line *0xac4
+[     152 ms] &"info line *0xac4\n"
+[     153 ms] ~"Line 35 of \"Lighting_Control_For_The_Garden.c\" starts at address 0xac4 <main+168> and ends at 0xad0 <main+180>.\n"
+[     153 ms] ^done
+[     153 ms] -file-list-exec-source-files
+[     161 ms] ^done,files=[{file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c"},{file="/usr/lib/gcc/arm-linux-gnueabihf/6/include/stddef.h",fullname="/usr/lib/gcc/arm-linux-gnueabihf/6/include/stddef.h"},{file="/usr/include/arm-linux-gnueabihf/bits/types.h",fullname="/usr/include/arm-linux-gnueabihf/bits/types.h"},{file="/usr/include/libio.h",fullname="/usr/include/libio.h"},{file="/usr/include/stdio.h",fullname="/usr/include/stdio.h"},{file="/usr/include/arm-linux-gnueabihf/bits/sys_errlist.h",fullname="/usr/include/arm-linux-gnueabihf/bits/sys_errlist.h"},{file="/usr/include/time.h",fullname="/usr/include/time.h"},{file="/usr/include/arm-linux-gnueabihf/sys/time.h",fullname="/usr/include/arm-linux-gnueabihf/sys/time.h"},{file="Reading_Analog.h",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Reading_Analog.h"},{file="/usr/include/unistd.h",fullname="/usr/include/unistd.h"},{file="/usr/include/getopt.h",fullname="/usr/include/getopt.h"},{file="Gpio_init.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Gpio_init.c"}]
+[     161 ms] -break-insert -f /tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:52
+[     166 ms] ^done,bkpt={number="3",type="breakpoint",disp="keep",enabled="y",addr="0x00000b0a",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="52",thread-groups=["i1"],times="0",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:52"}
+[     166 ms] -break-after 3 0
+[     168 ms] ^done
+[     169 ms] info symbol 0xb0a
+[     170 ms] &"info symbol 0xb0a\n"
+[     172 ms] ~"main + 238 in section .text\n"
+[     173 ms] ^done
+[     173 ms] info line *0xb0a
+[     175 ms] &"info line *0xb0a\n"
+[     175 ms] ~"Line 53 of \"Lighting_Control_For_The_Garden.c\" starts at address 0xb0a <main+238> and ends at 0xb16 <main+250>.\n"
+[     176 ms] ^done
+[     177 ms] info signals
+[     181 ms] &"info signals\n"
+[     181 ms] ~"Signal        Stop\tPrint\tPass to program\tDescription\n"
+[     181 ms] ~"\n"
+[     181 ms] ~"SIGHUP        Yes\tYes\tYes\t\tHangup\n"
+[     181 ms] ~"SIGINT        Yes\tYes\tNo\t\tInterrupt\n"
+[     181 ms] ~"SIGQUIT       Yes\tYes\tYes\t\tQuit\n"
+[     182 ms] ~"SIGILL        Yes\tYes\tYes\t\tIllegal instruction\n"
+[     182 ms] ~"SIGTRAP       Yes\tYes\tNo\t\tTrace/breakpoint trap\n"
+[     184 ms] ~"SIGABRT       Yes\tYes\tYes\t\tAborted\n"
+[     184 ms] ~"SIGEMT        Yes\tYes\tYes\t\tEmulation trap\n"
+[     184 ms] ~"SIGFPE        Yes\tYes\tYes\t\tArithmetic exception\n"
+[     185 ms] ~"SIGKILL       Yes\tYes\tYes\t\tKilled\n"
+[     185 ms] ~"SIGBUS        Yes\tYes\tYes\t\tBus error\n"
+[     185 ms] ~"SIGSEGV       Yes\tYes\tYes\t\tSegmentation fault\n"
+[     186 ms] ~"SIGSYS        Yes\tYes\tYes\t\tBad system call\n"
+[     187 ms] ~"SIGPIPE       Yes\tYes\tYes\t\tBroken pipe\n"
+[     187 ms] ~"SIGALRM       No\tNo\tYes\t\tAlarm clock\n"
+[     188 ms] ~"SIGTERM       Yes\tYes\tYes\t\tTerminated\n"
+[     189 ms] ~"SIGURG        No\tNo\tYes\t\tUrgent I/O condition\n"
+[     189 ms] ~"SIGSTOP       Yes\tYes\tYes\t\tStopped (signal)\n"
+[     190 ms] ~"SIGTSTP       Yes\tYes\tYes\t\tStopped (user)\n"
+[     190 ms] ~"SIGCONT       Yes\tYes\tYes\t\tContinued\n"
+[     191 ms] ~"SIGCHLD       No\tNo\tYes\t\tChild status changed\n"
+[     192 ms] ~"SIGTTIN       Yes\tYes\tYes\t\tStopped (tty input)\n"
+[     193 ms] ~"SIGTTOU       Yes\tYes\tYes\t\tStopped (tty output)\n"
+[     193 ms] ~"SIGIO         No\tNo\tYes\t\tI/O possible\n"
+[     194 ms] ~"SIGXCPU       Yes\tYes\tYes\t\tCPU time limit exceeded\n"
+[     194 ms] ~"SIGXFSZ       Yes\tYes\tYes\t\tFile size limit exceeded\n"
+[     195 ms] ~"SIGVTALRM     No\tNo\tYes\t\tVirtual timer expired\n"
+[     196 ms] ~"SIGPROF       No\tNo\tYes\t\tProfiling timer expired\n"
+[     196 ms] ~"SIGWINCH      No\tNo\tYes\t\tWindow size changed\n"
+[     197 ms] ~"SIGLOST       Yes\tYes\tYes\t\tResource lost\n"
+[     197 ms] ~"SIGUSR1       Yes\tYes\tYes\t\tUser defined signal 1\n"
+[     199 ms] ~"SIGUSR2       Yes\tYes\tYes\t\tUser defined signal 2\n"
+[     199 ms] ~"SIGPWR        Yes\tYes\tYes\t\tPower fail/restart\n"
+[     200 ms] ~"SIGPOLL       No\tNo\tYes\t\tPollable event occurred\n"
+[     200 ms] ~"SIGWIND       Yes\tYes\tYes\t\tSIGWIND\n"
+[     201 ms] ~"SIGPHONE      Yes\tYes\tYes\t\tSIGPHONE\n"
+[     201 ms] ~"SIGWAITING    No\tNo\tYes\t\tProcess's LWPs are blocked\n"
+[     202 ms] ~"SIGLWP        No\tNo\tYes\t\tSignal LWP\n"
+[     202 ms] ~"SIGDANGER     Yes\tYes\tYes\t\tSwap space dangerously low\n"
+[     204 ms] ~"SIGGRANT      Yes\tYes\tYes\t\tMonitor mode granted\n"
+[     205 ms] ~"SIGRETRACT    Yes\tYes\tYes\t\tNeed to relinquish monitor mode\n"
+[     206 ms] ~"SIGMSG        Yes\tYes\tYes\t\tMonitor mode data available\n"
+[     206 ms] ~"SIGSOUND      Yes\tYes\tYes\t\tSound completed\n"
+[     207 ms] ~"SIGSAK        Yes\tYes\tYes\t\tSecure attention\n"
+[     207 ms] ~"SIGPRIO       No\tNo\tYes\t\tSIGPRIO\n"
+[     208 ms] ~"SIG33         Yes\tYes\tYes\t\tReal-time event 33\n"
+[     208 ms] ~"SIG34         Yes\tYes\tYes\t\tReal-time event 34\n"
+[     210 ms] ~"SIG35         Yes\tYes\tYes\t\tReal-time event 35\n"
+[     210 ms] ~"SIG36         Yes\tYes\tYes\t\tReal-time event 36\n"
+[     211 ms] ~"SIG37         Yes\tYes\tYes\t\tReal-time event 37\n"
+[     211 ms] ~"SIG38         Yes\tYes\tYes\t\tReal-time event 38\n"
+[     211 ms] ~"SIG39         Yes\tYes\tYes\t\tReal-time event 39\n"
+[     211 ms] ~"SIG40         Yes\tYes\tYes\t\tReal-time event 40\n"
+[     212 ms] ~"SIG41         Yes\tYes\tYes\t\tReal-time event 41\n"
+[     212 ms] ~"SIG42         Yes\tYes\tYes\t\tReal-time event 42\n"
+[     214 ms] ~"SIG43         Yes\tYes\tYes\t\tReal-time event 43\n"
+[     214 ms] ~"SIG44         Yes\tYes\tYes\t\tReal-time event 44\n"
+[     214 ms] ~"SIG45         Yes\tYes\tYes\t\tReal-time event 45\n"
+[     215 ms] ~"SIG46         Yes\tYes\tYes\t\tReal-time event 46\n"
+[     215 ms] ~"SIG47         Yes\tYes\tYes\t\tReal-time event 47\n"
+[     217 ms] ~"SIG48         Yes\tYes\tYes\t\tReal-time event 48\n"
+[     217 ms] ~"SIG49         Yes\tYes\tYes\t\tReal-time event 49\n"
+[     217 ms] ~"SIG50         Yes\tYes\tYes\t\tReal-time event 50\n"
+[     219 ms] ~"SIG51         Yes\tYes\tYes\t\tReal-time event 51\n"
+[     219 ms] ~"SIG52         Yes\tYes\tYes\t\tReal-time event 52\n"
+[     219 ms] ~"SIG53         Yes\tYes\tYes\t\tReal-time event 53\n"
+[     219 ms] ~"SIG54         Yes\tYes\tYes\t\tReal-time event 54\n"
+[     220 ms] ~"SIG55         Yes\tYes\tYes\t\tReal-time event 55\n"
+[     220 ms] ~"SIG56         Yes\tYes\tYes\t\tReal-time event 56\n"
+[     221 ms] ~"SIG57         Yes\tYes\tYes\t\tReal-time event 57\n"
+[     223 ms] ~"SIG58         Yes\tYes\tYes\t\tReal-time event 58\n"
+[     223 ms] ~"SIG59         Yes\tYes\tYes\t\tReal-time event 59\n"
+[     223 ms] ~"SIG60         Yes\tYes\tYes\t\tReal-time event 60\n"
+[     224 ms] ~"SIG61         Yes\tYes\tYes\t\tReal-time event 61\n"
+[     224 ms] ~"SIG62         Yes\tYes\tYes\t\tReal-time event 62\n"
+[     225 ms] ~"SIG63         Yes\tYes\tYes\t\tReal-time event 63\n"
+[     227 ms] ~"SIGCANCEL     No\tNo\tYes\t\tLWP internal signal\n"
+[     227 ms] ~"SIG32         Yes\tYes\tYes\t\tReal-time event 32\n"
+[     227 ms] ~"SIG64         Yes\tYes\tYes\t\tReal-time event 64\n"
+[     229 ms] ~"SIG65         Yes\tYes\tYes\t\tReal-time event 65\n"
+[     229 ms] ~"SIG66         Yes\tYes\tYes\t\tReal-time event 66\n"
+[     229 ms] ~"SIG67         Yes\tYes\tYes\t\tReal-time event 67\n"
+[     229 ms] ~"SIG68         Yes\tYes\tYes\t\tReal-time event 68\n"
+[     229 ms] ~"SIG69         Yes\tYes\tYes\t\tReal-time event 69\n"
+[     231 ms] ~"SIG70         Yes\tYes\tYes\t\tReal-time event 70\n"
+[     231 ms] ~"SIG71         Yes\tYes\tYes\t\tReal-time event 71\n"
+[     231 ms] ~"SIG72         Yes\tYes\tYes\t\tReal-time event 72\n"
+[     233 ms] ~"SIG73         Yes\tYes\tYes\t\tReal-time event 73\n"
+[     233 ms] ~"SIG74         Yes\tYes\tYes\t\tReal-time event 74\n"
+[     233 ms] ~"SIG75         Yes\tYes\tYes\t\tReal-time event 75\n"
+[     235 ms] ~"SIG76         Yes\tYes\tYes\t\tReal-time event 76\n"
+[     235 ms] ~"SIG77         Yes\tYes\tYes\t\tReal-time event 77\n"
+[     235 ms] ~"SIG78         Yes\tYes\tYes\t\tReal-time event 78\n"
+[     236 ms] ~"SIG79         Yes\tYes\tYes\t\tReal-time event 79\n"
+[     236 ms] ~"SIG80         Yes\tYes\tYes\t\tReal-time event 80\n"
+[     237 ms] ~"SIG81         Yes\tYes\tYes\t\tReal-time event 81\n"
+[     238 ms] ~"SIG82         Yes\tYes\tYes\t\tReal-time event 82\n"
+[     238 ms] ~"SIG83         Yes\tYes\tYes\t\tReal-time event 83\n"
+[     239 ms] ~"SIG84         Yes\tYes\tYes\t\tReal-time event 84\n"
+[     239 ms] ~"SIG85         Yes\tYes\tYes\t\tReal-time event 85\n"
+[     241 ms] ~"SIG86         Yes\tYes\tYes\t\tReal-time event 86\n"
+[     241 ms] ~"SIG87         Yes\tYes\tYes\t\tReal-time event 87\n"
+[     242 ms] ~"SIG88         Yes\tYes\tYes\t\tReal-time event 88\n"
+[     242 ms] ~"SIG89         Yes\tYes\tYes\t\tReal-time event 89\n"
+[     244 ms] ~"SIG90         Yes\tYes\tYes\t\tReal-time event 90\n"
+[     245 ms] ~"SIG91         Yes\tYes\tYes\t\tReal-time event 91\n"
+[     245 ms] ~"SIG92         Yes\tYes\tYes\t\tReal-time event 92\n"
+[     245 ms] ~"SIG93         Yes\tYes\tYes\t\tReal-time event 93\n"
+[     245 ms] ~"SIG94         Yes\tYes\tYes\t\tReal-time event 94\n"
+[     245 ms] ~"SIG95         Yes\tYes\tYes\t\tReal-time event 95\n"
+[     246 ms] ~"SIG96         Yes\tYes\tYes\t\tReal-time event 96\n"
+[     247 ms] ~"SIG97         Yes\tYes\tYes\t\tReal-time event 97\n"
+[     247 ms] ~"SIG98         Yes\tYes\tYes\t\tReal-time event 98\n"
+[     248 ms] ~"SIG99         Yes\tYes\tYes\t\tReal-time event 99\n"
+[     249 ms] ~"SIG100        Yes\tYes\tYes\t\tReal-time event 100\n"
+[     249 ms] ~"SIG101        Yes\tYes\tYes\t\tReal-time event 101\n"
+[     250 ms] ~"SIG102        Yes\tYes\tYes\t\tReal-time event 102\n"
+[     250 ms] ~"SIG103        Yes\tYes\tYes\t\tReal-time event 103\n"
+[     250 ms] ~"SIG104        Yes\tYes\tYes\t\tReal-time event 104\n"
+[     252 ms] ~"SIG105        Yes\tYes\tYes\t\tReal-time event 105\n"
+[     252 ms] ~"SIG106        Yes\tYes\tYes\t\tReal-time event 106\n"
+[     254 ms] ~"SIG107        Yes\tYes\tYes\t\tReal-time event 107\n"
+[     254 ms] ~"SIG108        Yes\tYes\tYes\t\tReal-time event 108\n"
+[     254 ms] ~"SIG109        Yes\tYes\tYes\t\tReal-time event 109\n"
+[     254 ms] ~"SIG110        Yes\tYes\tYes\t\tReal-time event 110\n"
+[     255 ms] ~"SIG111        Yes\tYes\tYes\t\tReal-time event 111\n"
+[     257 ms] ~"SIG112        Yes\tYes\tYes\t\tReal-time event 112\n"
+[     257 ms] ~"SIG113        Yes\tYes\tYes\t\tReal-time event 113\n"
+[     258 ms] ~"SIG114        Yes\tYes\tYes\t\tReal-time event 114\n"
+[     258 ms] ~"SIG115        Yes\tYes\tYes\t\tReal-time event 115\n"
+[     259 ms] ~"SIG116        Yes\tYes\tYes\t\tReal-time event 116\n"
+[     260 ms] ~"SIG117        Yes\tYes\tYes\t\tReal-time event 117\n"
+[     260 ms] ~"SIG118        Yes\tYes\tYes\t\tReal-time event 118\n"
+[     260 ms] ~"SIG119        Yes\tYes\tYes\t\tReal-time event 119\n"
+[     260 ms] ~"SIG120        Yes\tYes\tYes\t\tReal-time event 120\n"
+[     261 ms] ~"SIG121        Yes\tYes\tYes\t\tReal-time event 121\n"
+[     261 ms] ~"SIG122        Yes\tYes\tYes\t\tReal-time event 122\n"
+[     262 ms] ~"SIG123        Yes\tYes\tYes\t\tReal-time event 123\n"
+[     262 ms] ~"SIG124        Yes\tYes\tYes\t\tReal-time event 124\n"
+[     263 ms] ~"SIG125        Yes\tYes\tYes\t\tReal-time event 125\n"
+[     264 ms] ~"SIG126        Yes\tYes\tYes\t\tReal-time event 126\n"
+[     265 ms] ~"SIG127        Yes\tYes\tYes\t\tReal-time event 127\n"
+[     265 ms] ~"SIGINFO       Yes\tYes\tYes\t\tInformation request\n"
+[     266 ms] ~"EXC_BAD_ACCESS Yes\tYes\tYes\t\tCould not access memory\n"
+[     266 ms] ~"EXC_BAD_INSTRUCTION Yes\tYes\tYes\t\tIllegal instruction/operand\n"
+[     267 ms] ~"EXC_ARITHMETIC Yes\tYes\tYes\t\tArithmetic exception\n"
+[     268 ms] ~"EXC_EMULATION Yes\tYes\tYes\t\tEmulation instruction\n"
+[     269 ms] ~"EXC_SOFTWARE  Yes\tYes\tYes\t\tSoftware generated exception\n"
+[     269 ms] ~"EXC_BREAKPOINT Yes\tYes\tYes\t\tBreakpoint\n"
+[     270 ms] ~"SIGLIBRT      No\tNo\tYes\t\tlibrt internal signal\n"
+[     270 ms] ~"\nUse the \"handle\" command to change these tables.\n"
+[     271 ms] ^done
+[     273 ms] -data-evaluate-expression "sizeof(void *)"
+[     275 ms] ^done,value="4"
+[     275 ms] -exec-run
+[     282 ms] =thread-group-started,id="i1",pid="4720"
+[     283 ms] =thread-created,id="1",group-id="i1"
+[     312 ms] =breakpoint-modified,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x00400a2a",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="10",thread-groups=["i1"],times="0",original-location="main"}
+[     318 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="0",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[     321 ms] =breakpoint-modified,bkpt={number="3",type="breakpoint",disp="keep",enabled="y",addr="0x00400b0a",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="52",thread-groups=["i1"],times="0",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:52"}
+[     328 ms] =library-loaded,id="/lib/ld-linux-armhf.so.3",target-name="/lib/ld-linux-armhf.so.3",host-name="/lib/ld-linux-armhf.so.3",symbols-loaded="0",thread-group="i1"
+[     455 ms] ^running
+[     457 ms] *running,thread-id="all"
+[     528 ms] =library-loaded,id="/usr/lib/arm-linux-gnueabihf/libstdc++.so.6",target-name="/usr/lib/arm-linux-gnueabihf/libstdc++.so.6",host-name="/usr/lib/arm-linux-gnueabihf/libstdc++.so.6",symbols-loaded="0",thread-group="i1"
+[     531 ms] =library-loaded,id="/lib/arm-linux-gnueabihf/libm.so.6",target-name="/lib/arm-linux-gnueabihf/libm.so.6",host-name="/lib/arm-linux-gnueabihf/libm.so.6",symbols-loaded="0",thread-group="i1"
+[     534 ms] =library-loaded,id="/lib/arm-linux-gnueabihf/libgcc_s.so.1",target-name="/lib/arm-linux-gnueabihf/libgcc_s.so.1",host-name="/lib/arm-linux-gnueabihf/libgcc_s.so.1",symbols-loaded="0",thread-group="i1"
+[     537 ms] =library-loaded,id="/lib/arm-linux-gnueabihf/libc.so.6",target-name="/lib/arm-linux-gnueabihf/libc.so.6",host-name="/lib/arm-linux-gnueabihf/libc.so.6",symbols-loaded="0",thread-group="i1"
+[    3169 ms] =breakpoint-modified,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x00400a2a",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="10",thread-groups=["i1"],times="1",original-location="main"}
+[    3251 ms] ~"\n"
+[    3255 ms] ~"Breakpoint 1, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:10\n"
+[    3257 ms] ~"10\t\tprintf(\"Enter standby time between analogue radiation and valuesy from 1 to 60 \\n \");\n"
+[    3258 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="1",frame={addr="0x00400a2a",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="10"},thread-id="1",stopped-threads="all",core="0"
+[    3259 ms] info shared
+[    3261 ms] &"info shared\n"
+[    3265 ms] ~"From        To          Syms Read   Shared Object Library\n"
+[    3266 ms] ~"0xb6fd7840  0xb6feaf18  Yes         /lib/ld-linux-armhf.so.3\n"
+[    3268 ms] ~"0xb6f19d98  0xb6f8c720  Yes         /usr/lib/arm-linux-gnueabihf/libstdc++.so.6\n"
+[    3269 ms] ~"0xb6e37d68  0xb6e65a90  Yes         /lib/arm-linux-gnueabihf/libm.so.6\n"
+[    3270 ms] ~"0xb6e181b8  0xb6e22914  Yes         /lib/arm-linux-gnueabihf/libgcc_s.so.1\n"
+[    3271 ms] ~"0xb6d33040  0xb6dd7248  Yes         /lib/arm-linux-gnueabihf/libc.so.6\n"
+[    3272 ms] ^done
+[    3278 ms] -break-delete 1
+[    3281 ms] ^done
+[    3281 ms] -exec-continue
+[    3284 ms] ^running
+[    3284 ms] *running,thread-id="all"
+[    4292 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="1",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[    4299 ms] ~"\n"
+[    4303 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[    4304 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[    4305 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[    4309 ms] -stack-list-frames --thread 1
+[    4313 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[    4315 ms] -data-list-register-names
+[    4319 ms] ^done,register-names=["r0","r1","r2","r3","r4","r5","r6","r7","r8","r9","r10","r11","r12","sp","lr","pc","","","","","","","","","","cpsr","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","d0","d1","d2","d3","d4","d5","d6","d7","d8","d9","d10","d11","d12","d13","d14","d15","d16","d17","d18","d19","d20","d21","d22","d23","d24","d25","d26","d27","d28","d29","d30","d31","fpscr","s0","s1","s2","s3","s4","s5","s6","s7","s8","s9","s10","s11","s12","s13","s14","s15","s16","s17","s18","s19","s20","s21","s22","s23","s24","s25","s26","s27","s28","s29","s30","s31","q0","q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15"]
+[    4319 ms] -var-create --frame 0 --thread 1 - * "sum"
+[    4364 ms] ^error,msg="-var-create: unable to create variable object"
+[    4370 ms] -exec-continue
+[    4373 ms] ^running
+[    4373 ms] *running,thread-id="all"
+[    5387 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="2",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[    5393 ms] ~"\n"
+[    5398 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[    5399 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[    5401 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[    5404 ms] -stack-list-frames --thread 1
+[    5407 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[    5407 ms] -var-create --frame 0 --thread 1 - * "sum"
+[    5412 ms] ^error,msg="-var-create: unable to create variable object"
+[    5420 ms] -exec-continue
+[    5422 ms] ^running
+[    5423 ms] *running,thread-id="all"
+[    6436 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="3",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[    6448 ms] ~"\n"
+[    6448 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[    6449 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[    6450 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[    6454 ms] -stack-list-frames --thread 1
+[    6457 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[    6457 ms] -var-create --frame 0 --thread 1 - * "sum"
+[    6462 ms] ^error,msg="-var-create: unable to create variable object"
+[    6467 ms] -exec-continue
+[    6470 ms] ^running
+[    6470 ms] *running,thread-id="all"
+[    7484 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="4",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[    7490 ms] ~"\n"
+[    7494 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[    7496 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[    7497 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[    7499 ms] -stack-list-frames --thread 1
+[    7502 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[    7502 ms] -var-create --frame 0 --thread 1 - * "sum"
+[    7508 ms] ^error,msg="-var-create: unable to create variable object"
+[    7514 ms] -exec-continue
+[    7518 ms] ^running
+[    7519 ms] *running,thread-id="all"
+[    8532 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="5",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[    8539 ms] ~"\n"
+[    8543 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[    8544 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[    8545 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[    8548 ms] -stack-list-frames --thread 1
+[    8551 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[    8551 ms] -var-create --frame 0 --thread 1 - * "sum"
+[    8557 ms] ^error,msg="-var-create: unable to create variable object"
+[    8562 ms] -exec-continue
+[    8565 ms] ^running
+[    8566 ms] *running,thread-id="all"
+[    9579 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="6",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[    9586 ms] ~"\n"
+[    9590 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[    9591 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[    9592 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[    9596 ms] -stack-list-frames --thread 1
+[    9599 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[    9599 ms] -var-create --frame 0 --thread 1 - * "sum"
+[    9605 ms] ^error,msg="-var-create: unable to create variable object"
+[    9612 ms] -exec-continue
+[    9615 ms] ^running
+[    9616 ms] *running,thread-id="all"
+[   10629 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="7",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   10636 ms] ~"\n"
+[   10640 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   10646 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   10646 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   10657 ms] -stack-list-frames --thread 1
+[   10660 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   10660 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   10666 ms] ^error,msg="-var-create: unable to create variable object"
+[   10670 ms] -exec-continue
+[   10672 ms] ^running
+[   10673 ms] *running,thread-id="all"
+[   11686 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="8",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   11693 ms] ~"\n"
+[   11697 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   11699 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   11700 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   11708 ms] -stack-list-frames --thread 1
+[   11711 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   11711 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   11717 ms] ^error,msg="-var-create: unable to create variable object"
+[   11731 ms] -exec-continue
+[   11733 ms] ^running
+[   11734 ms] *running,thread-id="all"
+[   12747 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="9",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   12754 ms] ~"\n"
+[   12758 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   12759 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   12761 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   12775 ms] -stack-list-frames --thread 1
+[   12778 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   12778 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   12783 ms] ^error,msg="-var-create: unable to create variable object"
+[   12812 ms] -exec-continue
+[   12815 ms] ^running
+[   12816 ms] *running,thread-id="all"
+[   13829 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="10",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   13836 ms] ~"\n"
+[   13840 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   13841 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   13843 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   13852 ms] -stack-list-frames --thread 1
+[   13856 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   13856 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   13861 ms] ^error,msg="-var-create: unable to create variable object"
+[   13905 ms] -exec-continue
+[   13908 ms] ^running
+[   13909 ms] *running,thread-id="all"
+[   14922 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="11",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   14928 ms] ~"\n"
+[   14932 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   14934 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   14935 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   14938 ms] -stack-list-frames --thread 1
+[   14941 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   14941 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   14947 ms] ^error,msg="-var-create: unable to create variable object"
+[   14953 ms] -exec-continue
+[   14956 ms] ^running
+[   14956 ms] *running,thread-id="all"
+[   15970 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="12",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   15976 ms] ~"\n"
+[   15980 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   15982 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   15983 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   15985 ms] -stack-list-frames --thread 1
+[   15989 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   15989 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   15994 ms] ^error,msg="-var-create: unable to create variable object"
+[   16001 ms] -exec-continue
+[   16003 ms] ^running
+[   16004 ms] *running,thread-id="all"
+[   17017 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="13",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   17024 ms] ~"\n"
+[   17028 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   17029 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   17031 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   17033 ms] -stack-list-frames --thread 1
+[   17036 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   17036 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   17041 ms] ^error,msg="-var-create: unable to create variable object"
+[   17051 ms] -exec-continue
+[   17053 ms] ^running
+[   17054 ms] *running,thread-id="all"
+[   18067 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="14",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   18074 ms] ~"\n"
+[   18078 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   18080 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   18081 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   18084 ms] -stack-list-frames --thread 1
+[   18087 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   18087 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   18092 ms] ^error,msg="-var-create: unable to create variable object"
+[   18098 ms] -exec-continue
+[   18100 ms] ^running
+[   18101 ms] *running,thread-id="all"
+[   19115 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="15",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   19121 ms] ~"\n"
+[   19125 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   19127 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   19128 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   19130 ms] -stack-list-frames --thread 1
+[   19133 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   19133 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   19139 ms] ^error,msg="-var-create: unable to create variable object"
+[   19144 ms] -exec-continue
+[   19147 ms] ^running
+[   19148 ms] *running,thread-id="all"
+[   20162 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="16",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   20168 ms] ~"\n"
+[   20173 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   20174 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   20175 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   20177 ms] -stack-list-frames --thread 1
+[   20181 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   20181 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   20186 ms] ^error,msg="-var-create: unable to create variable object"
+[   20191 ms] -exec-continue
+[   20193 ms] ^running
+[   20194 ms] *running,thread-id="all"
+[   21207 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="17",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   21214 ms] ~"\n"
+[   21218 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   21219 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   21221 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   21223 ms] -stack-list-frames --thread 1
+[   21227 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   21227 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   21232 ms] ^error,msg="-var-create: unable to create variable object"
+[   21237 ms] -exec-continue
+[   21239 ms] ^running
+[   21240 ms] *running,thread-id="all"
+[   22252 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="18",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   22259 ms] ~"\n"
+[   22263 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   22264 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   22266 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   22270 ms] -stack-list-frames --thread 1
+[   22273 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   22273 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   22278 ms] ^error,msg="-var-create: unable to create variable object"
+[   22285 ms] -exec-continue
+[   22287 ms] ^running
+[   22288 ms] *running,thread-id="all"
+[   23301 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="19",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   23308 ms] ~"\n"
+[   23312 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   23313 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   23315 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   23319 ms] -stack-list-frames --thread 1
+[   23323 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   23323 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   23328 ms] ^error,msg="-var-create: unable to create variable object"
+[   23338 ms] -exec-continue
+[   23341 ms] ^running
+[   23341 ms] *running,thread-id="all"
+[   24355 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="20",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   24361 ms] ~"\n"
+[   24365 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   24367 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   24368 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   24370 ms] -stack-list-frames --thread 1
+[   24374 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   24374 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   24379 ms] ^error,msg="-var-create: unable to create variable object"
+[   24386 ms] -exec-continue
+[   24389 ms] ^running
+[   24390 ms] *running,thread-id="all"
+[   25403 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="21",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   25410 ms] ~"\n"
+[   25413 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   25415 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   25416 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   25420 ms] -stack-list-frames --thread 1
+[   25423 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   25423 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   25428 ms] ^error,msg="-var-create: unable to create variable object"
+[   25436 ms] -exec-continue
+[   25439 ms] ^running
+[   25439 ms] *running,thread-id="all"
+[   26453 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="22",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   26460 ms] ~"\n"
+[   26464 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   26465 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   26466 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   26469 ms] -stack-list-frames --thread 1
+[   26472 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   26473 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   26479 ms] ^error,msg="-var-create: unable to create variable object"
+[   26483 ms] -exec-continue
+[   26485 ms] ^running
+[   26486 ms] *running,thread-id="all"
+[   27500 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="23",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   27507 ms] ~"\n"
+[   27511 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   27512 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   27513 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   27531 ms] -stack-list-frames --thread 1
+[   27535 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   27535 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   27535 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   27540 ms] ^error,msg="-var-create: unable to create variable object"
+[   27579 ms] -exec-continue
+[   27581 ms] ^running
+[   27582 ms] *running,thread-id="all"
+[   28597 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="24",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   28603 ms] ~"\n"
+[   28607 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   28609 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   28610 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   28611 ms] -stack-list-frames --thread 1
+[   28615 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   28615 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   28620 ms] ^error,msg="-var-create: unable to create variable object"
+[   28627 ms] -exec-continue
+[   28629 ms] ^running
+[   28630 ms] *running,thread-id="all"
+[   29642 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="25",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   29649 ms] ~"\n"
+[   29653 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   29655 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   29656 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   29669 ms] -stack-list-frames --thread 1
+[   29672 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   29672 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   29677 ms] ^error,msg="-var-create: unable to create variable object"
+[   29698 ms] -exec-continue
+[   29701 ms] ^running
+[   29701 ms] *running,thread-id="all"
+[   30713 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="26",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   30720 ms] ~"\n"
+[   30724 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   30726 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   30727 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   30734 ms] -stack-list-frames --thread 1
+[   30737 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   30737 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   30742 ms] ^error,msg="-var-create: unable to create variable object"
+[   30751 ms] -exec-continue
+[   30754 ms] ^running
+[   30755 ms] *running,thread-id="all"
+[   31768 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="27",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   31775 ms] ~"\n"
+[   31779 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   31780 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   31782 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   31785 ms] -stack-list-frames --thread 1
+[   31789 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   31789 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   31794 ms] ^error,msg="-var-create: unable to create variable object"
+[   31800 ms] -exec-continue
+[   31803 ms] ^running
+[   31803 ms] *running,thread-id="all"
+[   32817 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="28",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   32824 ms] ~"\n"
+[   32827 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   32829 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   32830 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   32832 ms] -stack-list-frames --thread 1
+[   32836 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   32836 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   32841 ms] ^error,msg="-var-create: unable to create variable object"
+[   32848 ms] -exec-continue
+[   32851 ms] ^running
+[   32851 ms] *running,thread-id="all"
+[   33865 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="29",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   33872 ms] ~"\n"
+[   33875 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   33877 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   33878 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   33880 ms] -stack-list-frames --thread 1
+[   33884 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   33884 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   33889 ms] ^error,msg="-var-create: unable to create variable object"
+[   33895 ms] -exec-continue
+[   33897 ms] ^running
+[   33898 ms] *running,thread-id="all"
+[   34912 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="30",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   34919 ms] ~"\n"
+[   34923 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   34924 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   34925 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   34933 ms] -stack-list-frames --thread 1
+[   34937 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   34937 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   34942 ms] ^error,msg="-var-create: unable to create variable object"
+[   34955 ms] -exec-continue
+[   34958 ms] ^running
+[   34959 ms] *running,thread-id="all"
+[   35973 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="31",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   35980 ms] ~"\n"
+[   35983 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   35985 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   35986 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   35988 ms] -stack-list-frames --thread 1
+[   35992 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   35992 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   35997 ms] ^error,msg="-var-create: unable to create variable object"
+[   36000 ms] -exec-continue
+[   36003 ms] ^running
+[   36004 ms] *running,thread-id="all"
+[   37016 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="32",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   37023 ms] ~"\n"
+[   37027 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   37029 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   37030 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   37032 ms] -stack-list-frames --thread 1
+[   37035 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   37035 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   37040 ms] ^error,msg="-var-create: unable to create variable object"
+[   37044 ms] -exec-continue
+[   37047 ms] ^running
+[   37048 ms] *running,thread-id="all"
+[   38061 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="33",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   38068 ms] ~"\n"
+[   38075 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   38075 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   38076 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   38079 ms] -stack-list-frames --thread 1
+[   38082 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   38082 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   38087 ms] ^error,msg="-var-create: unable to create variable object"
+[   38092 ms] -exec-continue
+[   38094 ms] ^running
+[   38095 ms] *running,thread-id="all"
+[   39108 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="34",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   39115 ms] ~"\n"
+[   39119 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   39120 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   39121 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   39124 ms] -stack-list-frames --thread 1
+[   39127 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   39127 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   39133 ms] ^error,msg="-var-create: unable to create variable object"
+[   39140 ms] -exec-continue
+[   39143 ms] ^running
+[   39143 ms] *running,thread-id="all"
+[   40157 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="35",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   40163 ms] ~"\n"
+[   40167 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   40168 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   40170 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   40172 ms] -stack-list-frames --thread 1
+[   40175 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   40175 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   40180 ms] ^error,msg="-var-create: unable to create variable object"
+[   40184 ms] -exec-continue
+[   40187 ms] ^running
+[   40187 ms] *running,thread-id="all"
+[   41201 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="36",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   41207 ms] ~"\n"
+[   41211 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   41212 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   41214 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   41216 ms] -stack-list-frames --thread 1
+[   41220 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   41220 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   41225 ms] ^error,msg="-var-create: unable to create variable object"
+[   41235 ms] -exec-continue
+[   41238 ms] ^running
+[   41238 ms] *running,thread-id="all"
+[   42252 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="37",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   42259 ms] ~"\n"
+[   42262 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   42264 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   42265 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   42269 ms] -stack-list-frames --thread 1
+[   42272 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   42272 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   42277 ms] ^error,msg="-var-create: unable to create variable object"
+[   42281 ms] -exec-continue
+[   42284 ms] ^running
+[   42285 ms] *running,thread-id="all"
+[   43299 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="38",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   43305 ms] ~"\n"
+[   43309 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   43311 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   43312 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   43315 ms] -stack-list-frames --thread 1
+[   43318 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   43318 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   43323 ms] ^error,msg="-var-create: unable to create variable object"
+[   43327 ms] -exec-continue
+[   43330 ms] ^running
+[   43331 ms] *running,thread-id="all"
+[   44343 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="39",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   44350 ms] ~"\n"
+[   44354 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   44356 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   44361 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   44366 ms] -stack-list-frames --thread 1
+[   44369 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   44369 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   44374 ms] ^error,msg="-var-create: unable to create variable object"
+[   44383 ms] -exec-continue
+[   44386 ms] ^running
+[   44386 ms] *running,thread-id="all"
+[   45399 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="40",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   45406 ms] ~"\n"
+[   45410 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   45412 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   45413 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   45416 ms] -stack-list-frames --thread 1
+[   45419 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   45419 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   45424 ms] ^error,msg="-var-create: unable to create variable object"
+[   45435 ms] -exec-continue
+[   45438 ms] ^running
+[   45438 ms] *running,thread-id="all"
+[   46452 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="41",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   46459 ms] ~"\n"
+[   46463 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   46464 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   46466 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   46468 ms] -stack-list-frames --thread 1
+[   46471 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   46471 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   46476 ms] ^error,msg="-var-create: unable to create variable object"
+[   46485 ms] -exec-continue
+[   46487 ms] ^running
+[   46488 ms] *running,thread-id="all"
+[   47501 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="42",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   47508 ms] ~"\n"
+[   47512 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   47513 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   47514 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   47517 ms] -stack-list-frames --thread 1
+[   47520 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   47520 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   47526 ms] ^error,msg="-var-create: unable to create variable object"
+[   47532 ms] -exec-continue
+[   47535 ms] ^running
+[   47535 ms] *running,thread-id="all"
+[   48548 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="43",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   48555 ms] ~"\n"
+[   48559 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   48560 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   48562 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   48564 ms] -stack-list-frames --thread 1
+[   48567 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   48568 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   48573 ms] ^error,msg="-var-create: unable to create variable object"
+[   48578 ms] -exec-continue
+[   48580 ms] ^running
+[   48581 ms] *running,thread-id="all"
+[   49595 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="44",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   49601 ms] ~"\n"
+[   49605 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   49607 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   49608 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   49610 ms] -stack-list-frames --thread 1
+[   49613 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   49613 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   49618 ms] ^error,msg="-var-create: unable to create variable object"
+[   49626 ms] -exec-continue
+[   49629 ms] ^running
+[   49630 ms] *running,thread-id="all"
+[   50643 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="34",thread-groups=["i1"],times="45",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c:34"}
+[   50650 ms] ~"\n"
+[   50654 ms] ~"Breakpoint 2, main (argc=1, argv=0xbefffba4) at Lighting_Control_For_The_Garden.c:35\n"
+[   50655 ms] ~"35\t\t\t\tif(!gpio_get_value(20))\n"
+[   50656 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400ac4",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffba4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"},thread-id="1",stopped-threads="all",core="0"
+[   50659 ms] -stack-list-frames --thread 1
+[   50662 ms] ^done,stack=[frame={level="0",addr="0x00400ac4",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="35"}]
+[   50662 ms] -var-create --frame 0 --thread 1 - * "sum"
+[   50667 ms] ^error,msg="-var-create: unable to create variable object"
+[   50673 ms] -exec-continue
+[   50676 ms] ^running
+[   50676 ms] *running,thread-id="all"
+[   50796 ms] ~"\nProgram"
+[   50798 ms] ~" received signal SIGINT, Interrupt.\n"
+[   50800 ms] ~"0xb6d8e3f4 in nanosleep () at ../sysdeps/unix/syscall-template.S:84\n"
+[   50802 ms] &"84\t../sysdeps/unix/syscall-template.S: No such file or directory.\n"
+[   50803 ms] *stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0xb6d8e3f4",func="nanosleep",args=[],file="../sysdeps/unix/syscall-template.S",fullname="/build/glibc-5io0ym/glibc-2.24/posix/../sysdeps/unix/syscall-template.S",line="84"},thread-id="1",stopped-threads="all",core="0"
+[   50825 ms] -break-after 2 0
+[   50828 ms] ^done
+[   50829 ms] -stack-list-frames --thread 1
+[   50839 ms] ^done,stack=[frame={level="0",addr="0xb6d8e3f4",func="nanosleep",file="../sysdeps/unix/syscall-template.S",fullname="/build/glibc-5io0ym/glibc-2.24/posix/../sysdeps/unix/syscall-template.S",line="84"},frame={level="1",addr="0xb6d8e328",func="__sleep",file="../sysdeps/posix/sleep.c",fullname="/build/glibc-5io0ym/glibc-2.24/posix/../sysdeps/posix/sleep.c",line="55"},frame={level="2",addr="0x00400a4a",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="18"}]
+[   50840 ms] -stack-list-arguments --thread 1 0
+[   50843 ms] ^done,stack-args=[frame={level="0",args=[]},frame={level="1",args=[name="seconds"]},frame={level="2",args=[name="argc",name="argv"]}]
+[   50922 ms] -data-evaluate-expression "sizeof(void *)"
+[   50968 ms] ^done,value="4"
+[   50968 ms] -data-evaluate-expression "sizeof(int)"
+[   50971 ms] ^done,value="4"
+[   50971 ms] -data-evaluate-expression "sizeof(short)"
+[   51016 ms] ^done,value="2"
+[   51016 ms] -data-evaluate-expression "sizeof(long)"
+[   51061 ms] ^done,value="4"
+[   51061 ms] -data-evaluate-expression "sizeof(long long)"
+[   51107 ms] ^done,value="8"
+[   51107 ms] -data-evaluate-expression "sizeof(char)"
+[   51110 ms] ^done,value="1"
+[   51110 ms] -data-evaluate-expression "sizeof(wchar_t)"
+[   51118 ms] ^done,value="4"
+[   51118 ms] -data-evaluate-expression "sizeof(float)"
+[   51121 ms] ^done,value="4"
+[   51121 ms] -data-evaluate-expression "sizeof(double)"
+[   51125 ms] ^done,value="8"
+[   51125 ms] -data-evaluate-expression "sizeof(long double)"
+[   51128 ms] ^done,value="8"
+[   51213 ms] -var-create --frame 2 --thread 1 - * "tm.tm_hour"
+[   51261 ms] ^done,name="var46",numchild="0",value="22",type="int",thread-id="1",has_more="0"
+[   51263 ms] -var-create --frame 2 --thread 1 - * "myt"
+[   51267 ms] ^done,name="var47",numchild="0",value="22",type="int",thread-id="1",has_more="0"
+[   51268 ms] -var-create --frame 2 --thread 1 - * "sum"
+[   51274 ms] ^error,msg="-var-create: unable to create variable object"
+[   52936 ms] -break-delete 2
+[   52939 ms] ^done
+[   55945 ms] -break-delete 3
+[   55948 ms] ^done
+[   58127 ms] -exec-continue
+[   58131 ms] ^running
+[   58131 ms] *running,thread-id="all"
+[37029196 ms] ~"\nProgram"
+[37029197 ms] ~" received signal SIGINT, Interrupt.\n"
+[37029200 ms] ~"0xb6d8e3f4 in nanosleep () at ../sysdeps/unix/syscall-template.S:84\n"
+[37029201 ms] ~"84\tin ../sysdeps/unix/syscall-template.S\n"
+[37029202 ms] *stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0xb6d8e3f4",func="nanosleep",args=[],file="../sysdeps/unix/syscall-template.S",fullname="/build/glibc-5io0ym/glibc-2.24/posix/../sysdeps/unix/syscall-template.S",line="84"},thread-id="1",stopped-threads="all",core="0"
+[37029406 ms] -gdb-exit
+[37029410 ms] ^exit

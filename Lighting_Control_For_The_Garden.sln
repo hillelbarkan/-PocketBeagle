@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lighting_Control_For_The_Garden", "Lighting_Control_For_The_Garden\Lighting_Control_For_The_Garden.vcxproj", "{6489C22A-5173-4D4E-9DF4-5D6CC72D506A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|VisualGDB = Debug|VisualGDB
+		Release|VisualGDB = Release|VisualGDB
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6489C22A-5173-4D4E-9DF4-5D6CC72D506A}.Debug|VisualGDB.ActiveCfg = Debug|VisualGDB
+		{6489C22A-5173-4D4E-9DF4-5D6CC72D506A}.Debug|VisualGDB.Build.0 = Debug|VisualGDB
+		{6489C22A-5173-4D4E-9DF4-5D6CC72D506A}.Release|VisualGDB.ActiveCfg = Release|VisualGDB
+		{6489C22A-5173-4D4E-9DF4-5D6CC72D506A}.Release|VisualGDB.Build.0 = Release|VisualGDB
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {90342AA4-2D68-4B06-8F27-BA9F52B9D576}
+	EndGlobalSection
+EndGlobal

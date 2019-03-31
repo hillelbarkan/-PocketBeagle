@@ -1,0 +1,4 @@
+﻿  VisualGDB: C:\projects\Lighting_Control_For_The_Garden\LinuxProject1\LinuxProject1 => /tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/LinuxProject1/LinuxProject1: 1 files copied (252 bytes).
+  VisualGDB: Run "make -f "VisualGDB/Debug/LinuxProject1.msbuild-mak" --no-print-directory" in directory "/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/LinuxProject1/LinuxProject1" on root@PocketBeagl (SSH)
+  LinuxProject1.c
+  Linking ../VisualGDB/Debug/LinuxProject1...

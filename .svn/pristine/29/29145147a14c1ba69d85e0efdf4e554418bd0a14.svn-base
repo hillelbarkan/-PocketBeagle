@@ -1,0 +1,28 @@
+﻿  VisualGDB: C:\projects\Lighting_Control_For_The_Garden\Lighting_Control_For_The_Garden => /tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden: 1 files copied (2405 bytes), 4 files are up-to-date.
+  VisualGDB: Run "make -f "VisualGDB/Debug/Lighting_Control_For_The_Garden.msbuild-mak" --no-print-directory" in directory "/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden" on root@10.0.0.38 (SSH)
+  Analog_Input.c
+  Analog_Input.c: In function ‘SET_Anlog_Raw_init’:
+Analog_Input.c(42,5): warning :  assignment makes integer from pointer without a cast [-Wint-conversion]
+    fd = fopen(buf, "r");
+       ^
+Analog_Input.c(56,29): warning :  passing argument 4 of ‘fread’ makes pointer from integer without a cast [-Wint-conversion]
+        fread(value_str, 6, 6, fd);
+                               ^~
+  Analog_Input.c(1):
+  C:\Users\b_hil\AppData\Local\VisualGDB\RemoteSourceCache\10.0.0.38\0000\include\stdio.h(711,15): note :  expected ‘FILE * restrict {aka struct _IO_FILE * restrict}’ but argument is of type ‘int’
+   extern size_t fread (void *__restrict __ptr, size_t __size,
+                 ^~~~~
+Analog_Input.c(64,5): warning :  implicit declaration of function ‘usleep’ [-Wimplicit-function-declaration]
+       usleep(5000);
+       ^~~~~~
+Analog_Input.c(65,12): warning :  passing argument 1 of ‘rewind’ makes pointer from integer without a cast [-Wint-conversion]
+       rewind(fd);
+              ^~
+  Analog_Input.c(1):
+  C:\Users\b_hil\AppData\Local\VisualGDB\RemoteSourceCache\10.0.0.38\0000\include\stdio.h(761,13): note :  expected ‘FILE * {aka struct _IO_FILE *}’ but argument is of type ‘int’
+   extern void rewind (FILE *__stream);
+               ^~~~~~
+Analog_Input.c(93,3): warning :  implicit declaration of function ‘gpio_fd_close’ [-Wimplicit-function-declaration]
+     gpio_fd_close(fd);
+     ^~~~~~~~~~~~~
+  Linking ../VisualGDB/Debug/Lighting_Control_For_The_Garden...

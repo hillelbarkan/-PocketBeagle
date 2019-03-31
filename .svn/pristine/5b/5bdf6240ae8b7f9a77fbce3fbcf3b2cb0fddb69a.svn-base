@@ -1,0 +1,84 @@
+#include <stdio.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdlib.h>
+#include <time.h>
+#include <sys/time.h>
+#define SYS_Analog "/sys/bus/iio/devices/iio:device0/"
+#define MAX_BUF 64
+
+/****************************************************************
+ *in_voltage_raw
+ ****************************************************************/
+
+//float tt = 0.0;
+char value_str[7];
+float value_int = 0; 
+//long int value_int = 0; 
+int Number_of_times_to_read = 0, Number=0;
+int sum = 0;
+unsigned int average = 0;
+int sampling[100];
+int Current_time1=0;
+//unsigned int Waiting_time_new_measurement = 5;
+int time_new =0;
+
+
+
+//SET_Anlog_Raw_init(unsigned int in_voltage_raw, unsigned int Number_of_times_to_read, unsigned int Waiting_time_new_measurement)
+ float SET_Anlog_Raw_init(unsigned int in_voltage_raw, unsigned int Number_of_times_to_read, int argc)
+{
+	if (!time_new)
+	{
+		time_t t = time(NULL);
+		struct tm tm = *localtime(&t);
+		Current_time1 = tm.tm_min; 
+		Current_time1  = (Current_time1 + argc) % 60;
+		//Current_time1;
+		time_new = 1;
+	}
+    		
+	int fd, len;
+	char buf[MAX_BUF];
+	sum = 0; /*Calculate the average statistical analog complexes*/
+	len = snprintf(buf, sizeof(buf), SYS_Analog "in_voltage%d_raw", in_voltage_raw);       ///   in_voltage%_raw
+	fd = fopen(buf, "r");
+	if (fd < 0) {
+		perror("/sys/bus/iio/devices/iio:device0/in_voltage%d_raw");
+		return fd;
+	}
+	time_t t = time(NULL);
+	struct tm tm = *localtime(&t);
+	if (Current_time1 == tm.tm_min)	
+	{
+		
+		for (average = 0; average < 5; average++)   //for (average = 0; average < Number_of_times_to_read; average++)  //Number of samples, Calculate the average statistical analog complexes
+			{
+		
+		
+				fread(value_str, 6, 6, fd);
+				value_int = strtol(value_str, NULL, 0);
+				// ((float)value_int / 2274.4)/Number_of_times_to_read;
+		
+				sampling[average] = value_int;
+				sum += sampling[average]; /*Calculate the average statistical analog complexes*/
+				printf("CH 0 Anlog Volt: %f", value_int / 2274.4444); /*Voltage converter*/
+				printf("V \n");
+				fflush(stdout);
+				usleep(5000);
+				rewind(fd);
+				Number++;
+			}                    // while (Number_of_times_to_read >= Number);
+			 //average = sum / Number_of_times_to_read;      //average calculation
+	            	sum = sum / 5;// Number_of_times_to_read; 
+			printf("Average = %d\n", sum);
+		fclose(fd);
+		time_new = 0;
+	//	return 1; //average;
+	
+	
+	
+	}
+	gpio_fd_close(fd);
+}
+

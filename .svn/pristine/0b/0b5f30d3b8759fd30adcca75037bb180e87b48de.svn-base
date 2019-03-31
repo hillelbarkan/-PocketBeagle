@@ -1,0 +1,4 @@
+﻿  VisualGDB: C:\projects\Lighting_Control_For_The_Garden\Lighting_Control_For_The_Garden => /tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden: 1 files copied (1508 bytes), 4 files are up-to-date.
+  VisualGDB: Run "make -f "VisualGDB/Debug/Lighting_Control_For_The_Garden.msbuild-mak" --no-print-directory" in directory "/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden" on root@BeagleBoneGreenWireless (SSH)
+  Lighting_Control_For_The_Garden.c
+  Linking ../VisualGDB/Debug/Lighting_Control_For_The_Garden...

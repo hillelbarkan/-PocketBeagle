@@ -1,0 +1,1 @@
+-ggdb -O3 -DNDEBUG=1 -DRELEASE=1 -ffunction-sections -fdata-sections  

@@ -1,0 +1,595 @@
+              gdb --interpreter mi --args "/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/../VisualGDB/Debug/Lighting_Control_For_The_Garden"
+[       0 ms] =thread-group-added,id="i1"
+[       0 ms] =thread-group-added,id="i1"
+[       0 ms] -gdb-version
+[       0 ms] ~"GNU gdb (Debian 7.12-6) 7.12.0.20161007-git\n"
+[       1 ms] ~"Copyright (C) 2016 Free Software Foundation, Inc.\n"
+[       2 ms] ~"License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.  Type \"show copying\"\nand \"show warranty\" for details.\n"
+[       3 ms] ~"This GDB was configured as \"arm-linux-gnueabihf\".\nType \"show configuration\" for configuration details."
+[       4 ms] ~"\nFor bug reporting instructions, please see:\n"
+[       4 ms] ~"<http://www.gnu.org/software/gdb/bugs/>.\n"
+[       5 ms] ~"Find the GDB manual and other documentation resources online at:\n<http://www.gnu.org/software/gdb/documentation/>.\n"
+[       6 ms] ~"For help, type \"help\".\n"
+[       6 ms] ~"Type \"apropos word\" to search for commands related to \"word\"...\n"
+[      10 ms] ~"Reading symbols from /tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/../VisualGDB/Debug/Lighting_Control_For_The_Garden..."
+[      18 ms] ~"done.\n"
+[      24 ms] ~"GNU gdb (Debian 7.12-6) 7.12.0.20161007-git\n"
+[      24 ms] ~"Copyright (C) 2016 Free Software Foundation, Inc.\n"
+[      26 ms] ~"License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.  Type \"show copying\"\nand \"show warranty\" for details.\n"
+[      26 ms] ~"This GDB was configured as \"arm-linux-gnueabihf\".\nType \"show configuration\" for configuration details."
+[      27 ms] ~"\nFor bug reporting instructions, please see:\n"
+[      27 ms] ~"<http://www.gnu.org/software/gdb/bugs/>.\n"
+[      28 ms] ~"Find the GDB manual and other documentation resources online at:\n<http://www.gnu.org/software/gdb/documentation/>.\n"
+[      29 ms] ~"For help, type \"help\".\n"
+[      30 ms] ~"Type \"apropos word\" to search for commands related to \"word\".\n"
+[      30 ms] ^done
+[      30 ms] -list-features
+[      32 ms] ^done,features=["frozen-varobjs","pending-breakpoints","thread-info","data-read-memory-bytes","breakpoint-notifications","ada-task-info","language-option","info-gdb-mi-command","undefined-command-error-code","exec-run-start-option","python"]
+[      32 ms] -gdb-set disassembly-flavor intel
+[      35 ms] ^error,msg="No symbol \"disassembly\" in current context."
+[      35 ms] -gdb-set print demangle off
+[      36 ms] ^done
+[      37 ms] -break-insert -f main
+[      41 ms] ^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x000010da",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="25",thread-groups=["i1"],times="0",original-location="main"}
+[      75 ms] -inferior-tty-set /dev/pts/1
+[      77 ms] ^done
+[      83 ms] info target
+[      87 ms] &"info target\n"
+[      87 ms] ~"Symbols from \"/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/VisualGDB/Debug/Lighting_Control_For_The_Garden\".\n"
+[      87 ms] ~"Local exec file:\n"
+[      87 ms] ~"\t`/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/VisualGDB/Debug/Lighting_Control_For_The_Garden', file type elf32-littlearm.\n"
+[      87 ms] ~"\tEntry point: 0x9cc\n"
+[      88 ms] ~"\t0x00000154 - 0x0000016d is .interp\n"
+[      89 ms] ~"\t0x00000170 - 0x00000190 is .note.ABI-tag\n"
+[      89 ms] ~"\t0x00000190 - 0x000001b4 is .note.gnu.build-id\n"
+[      90 ms] ~"\t0x000001b4 - 0x000001fc is .gnu.hash\n"
+[      90 ms] ~"\t0x000001fc - 0x000004ac is .dynsym\n"
+[      91 ms] ~"\t0x000004ac - 0x00000659 is .dynstr\n"
+[      92 ms] ~"\t0x0000065a - 0x000006b0 is .gnu.version\n"
+[      92 ms] ~"\t0x000006b0 - 0x00000700 is .gnu.version_r\n"
+[      93 ms] ~"\t0x00000700 - 0x00000790 is .rel.dyn\n"
+[      93 ms] ~"\t0x00000790 - 0x00000868 is .rel.plt\n"
+[      94 ms] ~"\t0x00000868 - 0x00000874 is .init\n"
+[      94 ms] ~"\t0x00000874 - 0x000009cc is .plt\n"
+[      95 ms] ~"\t0x000009cc - 0x000012e0 is .text\n"
+[      95 ms] ~"\t0x000012e0 - 0x000012e8 is .fini\n"
+[      96 ms] ~"\t0x000012e8 - 0x0000167a is .rodata\n"
+[      96 ms] ~"\t0x0000167c - 0x00001684 is .ARM.exidx\n"
+[      97 ms] ~"\t0x00001684 - 0x00001688 is .eh_frame\n"
+[      97 ms] ~"\t0x00011ee4 - 0x00011ee8 is .init_array\n"
+[      98 ms] ~"\t0x00011ee8 - 0x00011eec is .fini_array\n"
+[      98 ms] ~"\t0x00011eec - 0x00011ef0 is .jcr\n"
+[      99 ms] ~"\t0x00011ef0 - 0x00012000 is .dynamic\n"
+[     100 ms] ~"\t0x00012000 - 0x000120b4 is .got\n"
+[     100 ms] ~"\t0x000120b4 - 0x000120b8 is .data\n"
+[     101 ms] ~"\t0x000120b8 - 0x00012274 is .bss\n"
+[     101 ms] ^done
+[     104 ms] -break-insert -f /tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36
+[     111 ms] ^done,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00000b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="0",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[     111 ms] -break-after 2 0
+[     112 ms] ^done
+[     112 ms] info symbol 0xb84
+[     114 ms] &"info symbol 0xb84\n"
+[     115 ms] ~"SET_Anlog_Raw_init + 124 in section .text\n"
+[     115 ms] ^done
+[     115 ms] info line *0xb84
+[     117 ms] &"info line *0xb84\n"
+[     118 ms] ~"Line 37 of \"Analog_Input.c\" starts at address 0xb84 <SET_Anlog_Raw_init+124> and ends at 0xb8e <SET_Anlog_Raw_init+134>.\n"
+[     119 ms] ^done
+[     119 ms] -file-list-exec-source-files
+[     130 ms] ^done,files=[{file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c"},{file="/usr/lib/gcc/arm-linux-gnueabihf/6/include/stddef.h",fullname="/usr/lib/gcc/arm-linux-gnueabihf/6/include/stddef.h"},{file="/usr/include/arm-linux-gnueabihf/bits/types.h",fullname="/usr/include/arm-linux-gnueabihf/bits/types.h"},{file="/usr/include/stdio.h",fullname="/usr/include/stdio.h"},{file="/usr/include/libio.h",fullname="/usr/include/libio.h"},{file="/usr/include/arm-linux-gnueabihf/bits/sys_errlist.h",fullname="/usr/include/arm-linux-gnueabihf/bits/sys_errlist.h"},{file="/usr/include/time.h",fullname="/usr/include/time.h"},{file="/usr/include/arm-linux-gnueabihf/sys/time.h",fullname="/usr/include/arm-linux-gnueabihf/sys/time.h"},{file="/usr/include/unistd.h",fullname="/usr/include/unistd.h"},{file="/usr/include/getopt.h",fullname="/usr/include/getopt.h"},{file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c"},{file="/usr/lib/gcc/arm-linux-gnueabihf/6/include/stddef.h",fullname="/usr/lib/gcc/arm-linux-gnueabihf/6/include/stddef.h"},{file="/usr/include/arm-linux-gnueabihf/bits/types.h",fullname="/usr/include/arm-linux-gnueabihf/bits/types.h"},{file="/usr/include/stdio.h",fullname="/usr/include/stdio.h"},{file="/usr/include/libio.h",fullname="/usr/include/libio.h"},{file="/usr/include/arm-linux-gnueabihf/bits/sys_errlist.h",fullname="/usr/include/arm-linux-gnueabihf/bits/sys_errlist.h"},{file="/usr/include/time.h",fullname="/usr/include/time.h"},{file="/usr/include/arm-linux-gnueabihf/sys/time.h",fullname="/usr/include/arm-linux-gnueabihf/sys/time.h"},{file="Reading_Analog.h",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Reading_Analog.h"},{file="/usr/include/unistd.h",fullname="/usr/include/unistd.h"},{file="/usr/include/getopt.h",fullname="/usr/include/getopt.h"},{file="/usr/include/signal.h",fullname="/usr/include/signal.h"},{file="Gpio_init.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Gpio_init.c"}]
+[     131 ms] info signals
+[     133 ms] &"info signals\n"
+[     134 ms] ~"Signal        Stop\tPrint\tPass to program\tDescription\n"
+[     134 ms] ~"\n"
+[     135 ms] ~"SIGHUP        Yes\tYes\tYes\t\tHangup\n"
+[     135 ms] ~"SIGINT        Yes\tYes\tNo\t\tInterrupt\n"
+[     136 ms] ~"SIGQUIT       Yes\tYes\tYes\t\tQuit\n"
+[     137 ms] ~"SIGILL        Yes\tYes\tYes\t\tIllegal instruction\n"
+[     137 ms] ~"SIGTRAP       Yes\tYes\tNo\t\tTrace/breakpoint trap\n"
+[     138 ms] ~"SIGABRT       Yes\tYes\tYes\t\tAborted\n"
+[     138 ms] ~"SIGEMT        Yes\tYes\tYes\t\tEmulation trap\n"
+[     139 ms] ~"SIGFPE        Yes\tYes\tYes\t\tArithmetic exception\n"
+[     140 ms] ~"SIGKILL       Yes\tYes\tYes\t\tKilled\n"
+[     140 ms] ~"SIGBUS        Yes\tYes\tYes\t\tBus error\n"
+[     141 ms] ~"SIGSEGV       Yes\tYes\tYes\t\tSegmentation fault\n"
+[     141 ms] ~"SIGSYS        Yes\tYes\tYes\t\tBad system call\n"
+[     142 ms] ~"SIGPIPE       Yes\tYes\tYes\t\tBroken pipe\n"
+[     142 ms] ~"SIGALRM       No\tNo\tYes\t\tAlarm clock\n"
+[     143 ms] ~"SIGTERM       Yes\tYes\tYes\t\tTerminated\n"
+[     143 ms] ~"SIGURG        No\tNo\tYes\t\tUrgent I/O condition\n"
+[     144 ms] ~"SIGSTOP       Yes\tYes\tYes\t\tStopped (signal)\n"
+[     145 ms] ~"SIGTSTP       Yes\tYes\tYes\t\tStopped (user)\n"
+[     145 ms] ~"SIGCONT       Yes\tYes\tYes\t\tContinued\n"
+[     146 ms] ~"SIGCHLD       No\tNo\tYes\t\tChild status changed\n"
+[     146 ms] ~"SIGTTIN       Yes\tYes\tYes\t\tStopped (tty input)\n"
+[     147 ms] ~"SIGTTOU       Yes\tYes\tYes\t\tStopped (tty output)\n"
+[     147 ms] ~"SIGIO         No\tNo\tYes\t\tI/O possible\n"
+[     148 ms] ~"SIGXCPU       Yes\tYes\tYes\t\tCPU time limit exceeded\n"
+[     149 ms] ~"SIGXFSZ       Yes\tYes\tYes\t\tFile size limit exceeded\n"
+[     149 ms] ~"SIGVTALRM     No\tNo\tYes\t\tVirtual timer expired\n"
+[     150 ms] ~"SIGPROF       No\tNo\tYes\t\tProfiling timer expired\n"
+[     150 ms] ~"SIGWINCH      No\tNo\tYes\t\tWindow size changed\n"
+[     151 ms] ~"SIGLOST       Yes\tYes\tYes\t\tResource lost\n"
+[     151 ms] ~"SIGUSR1       Yes\tYes\tYes\t\tUser defined signal 1\n"
+[     152 ms] ~"SIGUSR2       Yes\tYes\tYes\t\tUser defined signal 2\n"
+[     153 ms] ~"SIGPWR        Yes\tYes\tYes\t\tPower fail/restart\n"
+[     153 ms] ~"SIGPOLL       No\tNo\tYes\t\tPollable event occurred\n"
+[     155 ms] ~"SIGWIND       Yes\tYes\tYes\t\tSIGWIND\n"
+[     155 ms] ~"SIGPHONE      Yes\tYes\tYes\t\tSIGPHONE\n"
+[     155 ms] ~"SIGWAITING    No\tNo\tYes\t\tProcess's LWPs are blocked\n"
+[     155 ms] ~"SIGLWP        No\tNo\tYes\t\tSignal LWP\n"
+[     156 ms] ~"SIGDANGER     Yes\tYes\tYes\t\tSwap space dangerously low\n"
+[     157 ms] ~"SIGGRANT      Yes\tYes\tYes\t\tMonitor mode granted\n"
+[     157 ms] ~"SIGRETRACT    Yes\tYes\tYes\t\tNeed to relinquish monitor mode\n"
+[     158 ms] ~"SIGMSG        Yes\tYes\tYes\t\tMonitor mode data available\n"
+[     158 ms] ~"SIGSOUND      Yes\tYes\tYes\t\tSound completed\n"
+[     159 ms] ~"SIGSAK        Yes\tYes\tYes\t\tSecure attention\n"
+[     159 ms] ~"SIGPRIO       No\tNo\tYes\t\tSIGPRIO\n"
+[     160 ms] ~"SIG33         Yes\tYes\tYes\t\tReal-time event 33\n"
+[     161 ms] ~"SIG34         Yes\tYes\tYes\t\tReal-time event 34\n"
+[     161 ms] ~"SIG35         Yes\tYes\tYes\t\tReal-time event 35\n"
+[     162 ms] ~"SIG36         Yes\tYes\tYes\t\tReal-time event 36\n"
+[     162 ms] ~"SIG37         Yes\tYes\tYes\t\tReal-time event 37\n"
+[     163 ms] ~"SIG38         Yes\tYes\tYes\t\tReal-time event 38\n"
+[     163 ms] ~"SIG39         Yes\tYes\tYes\t\tReal-time event 39\n"
+[     164 ms] ~"SIG40         Yes\tYes\tYes\t\tReal-time event 40\n"
+[     165 ms] ~"SIG41         Yes\tYes\tYes\t\tReal-time event 41\n"
+[     165 ms] ~"SIG42         Yes\tYes\tYes\t\tReal-time event 42\n"
+[     166 ms] ~"SIG43         Yes\tYes\tYes\t\tReal-time event 43\n"
+[     166 ms] ~"SIG44         Yes\tYes\tYes\t\tReal-time event 44\n"
+[     167 ms] ~"SIG45         Yes\tYes\tYes\t\tReal-time event 45\n"
+[     167 ms] ~"SIG46         Yes\tYes\tYes\t\tReal-time event 46\n"
+[     168 ms] ~"SIG47         Yes\tYes\tYes\t\tReal-time event 47\n"
+[     168 ms] ~"SIG48         Yes\tYes\tYes\t\tReal-time event 48\n"
+[     169 ms] ~"SIG49         Yes\tYes\tYes\t\tReal-time event 49\n"
+[     170 ms] ~"SIG50         Yes\tYes\tYes\t\tReal-time event 50\n"
+[     170 ms] ~"SIG51         Yes\tYes\tYes\t\tReal-time event 51\n"
+[     171 ms] ~"SIG52         Yes\tYes\tYes\t\tReal-time event 52\n"
+[     171 ms] ~"SIG53         Yes\tYes\tYes\t\tReal-time event 53\n"
+[     172 ms] ~"SIG54         Yes\tYes\tYes\t\tReal-time event 54\n"
+[     172 ms] ~"SIG55         Yes\tYes\tYes\t\tReal-time event 55\n"
+[     173 ms] ~"SIG56         Yes\tYes\tYes\t\tReal-time event 56\n"
+[     174 ms] ~"SIG57         Yes\tYes\tYes\t\tReal-time event 57\n"
+[     174 ms] ~"SIG58         Yes\tYes\tYes\t\tReal-time event 58\n"
+[     175 ms] ~"SIG59         Yes\tYes\tYes\t\tReal-time event 59\n"
+[     175 ms] ~"SIG60         Yes\tYes\tYes\t\tReal-time event 60\n"
+[     176 ms] ~"SIG61         Yes\tYes\tYes\t\tReal-time event 61\n"
+[     177 ms] ~"SIG62         Yes\tYes\tYes\t\tReal-time event 62\n"
+[     177 ms] ~"SIG63         Yes\tYes\tYes\t\tReal-time event 63\n"
+[     178 ms] ~"SIGCANCEL     No\tNo\tYes\t\tLWP internal signal\n"
+[     178 ms] ~"SIG32         Yes\tYes\tYes\t\tReal-time event 32\n"
+[     179 ms] ~"SIG64         Yes\tYes\tYes\t\tReal-time event 64\n"
+[     179 ms] ~"SIG65         Yes\tYes\tYes\t\tReal-time event 65\n"
+[     180 ms] ~"SIG66         Yes\tYes\tYes\t\tReal-time event 66\n"
+[     180 ms] ~"SIG67         Yes\tYes\tYes\t\tReal-time event 67\n"
+[     181 ms] ~"SIG68         Yes\tYes\tYes\t\tReal-time event 68\n"
+[     183 ms] ~"SIG69         Yes\tYes\tYes\t\tReal-time event 69\n"
+[     183 ms] ~"SIG70         Yes\tYes\tYes\t\tReal-time event 70\n"
+[     183 ms] ~"SIG71         Yes\tYes\tYes\t\tReal-time event 71\n"
+[     183 ms] ~"SIG72         Yes\tYes\tYes\t\tReal-time event 72\n"
+[     184 ms] ~"SIG73         Yes\tYes\tYes\t\tReal-time event 73\n"
+[     184 ms] ~"SIG74         Yes\tYes\tYes\t\tReal-time event 74\n"
+[     185 ms] ~"SIG75         Yes\tYes\tYes\t\tReal-time event 75\n"
+[     185 ms] ~"SIG76         Yes\tYes\tYes\t\tReal-time event 76\n"
+[     186 ms] ~"SIG77         Yes\tYes\tYes\t\tReal-time event 77\n"
+[     187 ms] ~"SIG78         Yes\tYes\tYes\t\tReal-time event 78\n"
+[     187 ms] ~"SIG79         Yes\tYes\tYes\t\tReal-time event 79\n"
+[     188 ms] ~"SIG80         Yes\tYes\tYes\t\tReal-time event 80\n"
+[     188 ms] ~"SIG81         Yes\tYes\tYes\t\tReal-time event 81\n"
+[     189 ms] ~"SIG82         Yes\tYes\tYes\t\tReal-time event 82\n"
+[     190 ms] ~"SIG83         Yes\tYes\tYes\t\tReal-time event 83\n"
+[     190 ms] ~"SIG84         Yes\tYes\tYes\t\tReal-time event 84\n"
+[     191 ms] ~"SIG85         Yes\tYes\tYes\t\tReal-time event 85\n"
+[     191 ms] ~"SIG86         Yes\tYes\tYes\t\tReal-time event 86\n"
+[     192 ms] ~"SIG87         Yes\tYes\tYes\t\tReal-time event 87\n"
+[     192 ms] ~"SIG88         Yes\tYes\tYes\t\tReal-time event 88\n"
+[     193 ms] ~"SIG89         Yes\tYes\tYes\t\tReal-time event 89\n"
+[     194 ms] ~"SIG90         Yes\tYes\tYes\t\tReal-time event 90\n"
+[     194 ms] ~"SIG91         Yes\tYes\tYes\t\tReal-time event 91\n"
+[     195 ms] ~"SIG92         Yes\tYes\tYes\t\tReal-time event 92\n"
+[     195 ms] ~"SIG93         Yes\tYes\tYes\t\tReal-time event 93\n"
+[     196 ms] ~"SIG94         Yes\tYes\tYes\t\tReal-time event 94\n"
+[     196 ms] ~"SIG95         Yes\tYes\tYes\t\tReal-time event 95\n"
+[     197 ms] ~"SIG96         Yes\tYes\tYes\t\tReal-time event 96\n"
+[     197 ms] ~"SIG97         Yes\tYes\tYes\t\tReal-time event 97\n"
+[     198 ms] ~"SIG98         Yes\tYes\tYes\t\tReal-time event 98\n"
+[     199 ms] ~"SIG99         Yes\tYes\tYes\t\tReal-time event 99\n"
+[     199 ms] ~"SIG100        Yes\tYes\tYes\t\tReal-time event 100\n"
+[     200 ms] ~"SIG101        Yes\tYes\tYes\t\tReal-time event 101\n"
+[     201 ms] ~"SIG102        Yes\tYes\tYes\t\tReal-time event 102\n"
+[     201 ms] ~"SIG103        Yes\tYes\tYes\t\tReal-time event 103\n"
+[     202 ms] ~"SIG104        Yes\tYes\tYes\t\tReal-time event 104\n"
+[     202 ms] ~"SIG105        Yes\tYes\tYes\t\tReal-time event 105\n"
+[     203 ms] ~"SIG106        Yes\tYes\tYes\t\tReal-time event 106\n"
+[     203 ms] ~"SIG107        Yes\tYes\tYes\t\tReal-time event 107\n"
+[     204 ms] ~"SIG108        Yes\tYes\tYes\t\tReal-time event 108\n"
+[     205 ms] ~"SIG109        Yes\tYes\tYes\t\tReal-time event 109\n"
+[     205 ms] ~"SIG110        Yes\tYes\tYes\t\tReal-time event 110\n"
+[     206 ms] ~"SIG111        Yes\tYes\tYes\t\tReal-time event 111\n"
+[     206 ms] ~"SIG112        Yes\tYes\tYes\t\tReal-time event 112\n"
+[     207 ms] ~"SIG113        Yes\tYes\tYes\t\tReal-time event 113\n"
+[     207 ms] ~"SIG114        Yes\tYes\tYes\t\tReal-time event 114\n"
+[     208 ms] ~"SIG115        Yes\tYes\tYes\t\tReal-time event 115\n"
+[     209 ms] ~"SIG116        Yes\tYes\tYes\t\tReal-time event 116\n"
+[     209 ms] ~"SIG117        Yes\tYes\tYes\t\tReal-time event 117\n"
+[     210 ms] ~"SIG118        Yes\tYes\tYes\t\tReal-time event 118\n"
+[     210 ms] ~"SIG119        Yes\tYes\tYes\t\tReal-time event 119\n"
+[     211 ms] ~"SIG120        Yes\tYes\tYes\t\tReal-time event 120\n"
+[     211 ms] ~"SIG121        Yes\tYes\tYes\t\tReal-time event 121\n"
+[     212 ms] ~"SIG122        Yes\tYes\tYes\t\tReal-time event 122\n"
+[     213 ms] ~"SIG123        Yes\tYes\tYes\t\tReal-time event 123\n"
+[     213 ms] ~"SIG124        Yes\tYes\tYes\t\tReal-time event 124\n"
+[     214 ms] ~"SIG125        Yes\tYes\tYes\t\tReal-time event 125\n"
+[     214 ms] ~"SIG126        Yes\tYes\tYes\t\tReal-time event 126\n"
+[     215 ms] ~"SIG127        Yes\tYes\tYes\t\tReal-time event 127\n"
+[     215 ms] ~"SIGINFO       Yes\tYes\tYes\t\tInformation request\n"
+[     217 ms] ~"EXC_BAD_ACCESS Yes\tYes\tYes\t\tCould not access memory\n"
+[     217 ms] ~"EXC_BAD_INSTRUCTION Yes\tYes\tYes\t\tIllegal instruction/operand\n"
+[     218 ms] ~"EXC_ARITHMETIC Yes\tYes\tYes\t\tArithmetic exception\n"
+[     218 ms] ~"EXC_EMULATION Yes\tYes\tYes\t\tEmulation instruction\n"
+[     219 ms] ~"EXC_SOFTWARE  Yes\tYes\tYes\t\tSoftware generated exception\n"
+[     220 ms] ~"EXC_BREAKPOINT Yes\tYes\tYes\t\tBreakpoint\n"
+[     220 ms] ~"SIGLIBRT      No\tNo\tYes\t\tlibrt internal signal\n"
+[     221 ms] ~"\nUse the \"handle\" command to change these tables.\n"
+[     221 ms] ^done
+[     221 ms] -data-evaluate-expression "sizeof(void *)"
+[     224 ms] ^done,value="4"
+[     224 ms] -data-evaluate-expression "sizeof(int)"
+[     226 ms] ^done,value="4"
+[     226 ms] -data-evaluate-expression "sizeof(short)"
+[     228 ms] ^done,value="2"
+[     228 ms] -data-evaluate-expression "sizeof(long)"
+[     230 ms] ^done,value="4"
+[     230 ms] -exec-run
+[     236 ms] =thread-group-started,id="i1",pid="10865"
+[     237 ms] =thread-created,id="1",group-id="i1"
+[     266 ms] =breakpoint-modified,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x004010da",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="25",thread-groups=["i1"],times="0",original-location="main"}
+[     271 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="0",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[     276 ms] =library-loaded,id="/lib/ld-linux-armhf.so.3",target-name="/lib/ld-linux-armhf.so.3",host-name="/lib/ld-linux-armhf.so.3",symbols-loaded="0",thread-group="i1"
+[     402 ms] ^running
+[     403 ms] *running,thread-id="all"
+[     474 ms] =library-loaded,id="/usr/lib/arm-linux-gnueabihf/libstdc++.so.6",target-name="/usr/lib/arm-linux-gnueabihf/libstdc++.so.6",host-name="/usr/lib/arm-linux-gnueabihf/libstdc++.so.6",symbols-loaded="0",thread-group="i1"
+[     477 ms] =library-loaded,id="/lib/arm-linux-gnueabihf/libm.so.6",target-name="/lib/arm-linux-gnueabihf/libm.so.6",host-name="/lib/arm-linux-gnueabihf/libm.so.6",symbols-loaded="0",thread-group="i1"
+[     479 ms] =library-loaded,id="/lib/arm-linux-gnueabihf/libgcc_s.so.1",target-name="/lib/arm-linux-gnueabihf/libgcc_s.so.1",host-name="/lib/arm-linux-gnueabihf/libgcc_s.so.1",symbols-loaded="0",thread-group="i1"
+[     482 ms] =library-loaded,id="/lib/arm-linux-gnueabihf/libc.so.6",target-name="/lib/arm-linux-gnueabihf/libc.so.6",host-name="/lib/arm-linux-gnueabihf/libc.so.6",symbols-loaded="0",thread-group="i1"
+[    3101 ms] =breakpoint-modified,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x004010da",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="25",thread-groups=["i1"],times="1",original-location="main"}
+[    3183 ms] ~"\n"
+[    3186 ms] ~"Breakpoint 1, main (argc=1, argv=0xbefffbf4) at Lighting_Control_For_The_Garden.c:25\n"
+[    3188 ms] ~"25\t\tsignal(SIGTERM, gpio_set_value_0(20));\n"
+[    3189 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="1",frame={addr="0x004010da",func="main",args=[{name="argc",value="1"},{name="argv",value="0xbefffbf4"}],file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="25"},thread-id="1",stopped-threads="all",core="0"
+[    3192 ms] info shared
+[    3194 ms] &"info shared\n"
+[    3198 ms] ~"From        To          Syms Read   Shared Object Library\n"
+[    3199 ms] ~"0xb6fd7840  0xb6feae98  Yes         /lib/ld-linux-armhf.so.3\n"
+[    3199 ms] ~"0xb6f38d98  0xb6fab720  Yes         /usr/lib/arm-linux-gnueabihf/libstdc++.so.6\n"
+[    3200 ms] ~"0xb6e56d68  0xb6e84a90  Yes         /lib/arm-linux-gnueabihf/libm.so.6\n"
+[    3201 ms] ~"0xb6e371b8  0xb6e41914  Yes         /lib/arm-linux-gnueabihf/libgcc_s.so.1\n"
+[    3202 ms] ~"0xb6d52040  0xb6df6448  Yes         /lib/arm-linux-gnueabihf/libc.so.6\n"
+[    3202 ms] ^done
+[    3212 ms] -break-delete 1
+[    3214 ms] ^done
+[    3214 ms] -exec-continue
+[    3216 ms] ^running
+[    3216 ms] *running,thread-id="all"
+[    6518 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="1",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[    6523 ms] ~"\n"
+[    6525 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[    6527 ms] ~"37\t\t\ttime_new = 1;\n"
+[    6527 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[    6532 ms] -stack-list-frames --thread 1
+[    6535 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[    6537 ms] -data-list-register-names
+[    6541 ms] ^done,register-names=["r0","r1","r2","r3","r4","r5","r6","r7","r8","r9","r10","r11","r12","sp","lr","pc","","","","","","","","","","cpsr","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","d0","d1","d2","d3","d4","d5","d6","d7","d8","d9","d10","d11","d12","d13","d14","d15","d16","d17","d18","d19","d20","d21","d22","d23","d24","d25","d26","d27","d28","d29","d30","d31","fpscr","s0","s1","s2","s3","s4","s5","s6","s7","s8","s9","s10","s11","s12","s13","s14","s15","s16","s17","s18","s19","s20","s21","s22","s23","s24","s25","s26","s27","s28","s29","s30","s31","q0","q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15"]
+[    6541 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[    6584 ms] ^error,msg="-var-create: unable to create variable object"
+[    6588 ms] -exec-continue
+[    6590 ms] ^running
+[    6590 ms] *running,thread-id="all"
+[    7720 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="2",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[    7725 ms] ~"\n"
+[    7727 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[    7728 ms] ~"37\t\t\ttime_new = 1;\n"
+[    7729 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[    7734 ms] -stack-list-frames --thread 1
+[    7737 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[    7738 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[    7742 ms] ^error,msg="-var-create: unable to create variable object"
+[    7748 ms] -exec-continue
+[    7750 ms] ^running
+[    7751 ms] *running,thread-id="all"
+[    8878 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="3",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[    8883 ms] ~"\n"
+[    8886 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[    8887 ms] ~"37\t\t\ttime_new = 1;\n"
+[    8888 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[    8892 ms] -stack-list-frames --thread 1
+[    8895 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[    8895 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[    8900 ms] ^error,msg="-var-create: unable to create variable object"
+[    8905 ms] -exec-continue
+[    8907 ms] ^running
+[    8907 ms] *running,thread-id="all"
+[   10035 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="4",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   10040 ms] ~"\n"
+[   10043 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   10044 ms] ~"37\t\t\ttime_new = 1;\n"
+[   10044 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   10047 ms] -stack-list-frames --thread 1
+[   10051 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   10051 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   10055 ms] ^error,msg="-var-create: unable to create variable object"
+[   10062 ms] -exec-continue
+[   10064 ms] ^running
+[   10065 ms] *running,thread-id="all"
+[   11194 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="5",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   11199 ms] ~"\n"
+[   11201 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   11202 ms] ~"37\t\t\ttime_new = 1;\n"
+[   11203 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   11206 ms] -stack-list-frames --thread 1
+[   11209 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   11209 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   11214 ms] ^error,msg="-var-create: unable to create variable object"
+[   11223 ms] -exec-continue
+[   11225 ms] ^running
+[   11225 ms] *running,thread-id="all"
+[   12353 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="6",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   12358 ms] ~"\n"
+[   12361 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   12362 ms] ~"37\t\t\ttime_new = 1;\n"
+[   12365 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   12368 ms] -stack-list-frames --thread 1
+[   12371 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   12371 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   12376 ms] ^error,msg="-var-create: unable to create variable object"
+[   12380 ms] -exec-continue
+[   12381 ms] ^running
+[   12382 ms] *running,thread-id="all"
+[   13509 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="7",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   13514 ms] ~"\n"
+[   13517 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   13518 ms] ~"37\t\t\ttime_new = 1;\n"
+[   13519 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   13523 ms] -stack-list-frames --thread 1
+[   13526 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   13526 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   13531 ms] ^error,msg="-var-create: unable to create variable object"
+[   13539 ms] -exec-continue
+[   13541 ms] ^running
+[   13541 ms] *running,thread-id="all"
+[   14669 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="8",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   14674 ms] ~"\n"
+[   14677 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   14678 ms] ~"37\t\t\ttime_new = 1;\n"
+[   14679 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   14683 ms] -stack-list-frames --thread 1
+[   14686 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   14686 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   14691 ms] ^error,msg="-var-create: unable to create variable object"
+[   14694 ms] -exec-continue
+[   14696 ms] ^running
+[   14697 ms] *running,thread-id="all"
+[   15826 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="9",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   15831 ms] ~"\n"
+[   15833 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   15834 ms] ~"37\t\t\ttime_new = 1;\n"
+[   15835 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   15838 ms] -stack-list-frames --thread 1
+[   15841 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   15841 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   15845 ms] ^error,msg="-var-create: unable to create variable object"
+[   15852 ms] -exec-continue
+[   15854 ms] ^running
+[   15855 ms] *running,thread-id="all"
+[   16982 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="10",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   16987 ms] ~"\n"
+[   16990 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   16991 ms] ~"37\t\t\ttime_new = 1;\n"
+[   16991 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   16995 ms] -stack-list-frames --thread 1
+[   16998 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   16998 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   17003 ms] ^error,msg="-var-create: unable to create variable object"
+[   17007 ms] -exec-continue
+[   17009 ms] ^running
+[   17009 ms] *running,thread-id="all"
+[   18138 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="11",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   18143 ms] ~"\n"
+[   18146 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   18147 ms] ~"37\t\t\ttime_new = 1;\n"
+[   18147 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   18155 ms] -stack-list-frames --thread 1
+[   18158 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   18158 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   18162 ms] ^error,msg="-var-create: unable to create variable object"
+[   18168 ms] -exec-continue
+[   18170 ms] ^running
+[   18170 ms] *running,thread-id="all"
+[   19299 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="12",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   19304 ms] ~"\n"
+[   19306 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   19307 ms] ~"37\t\t\ttime_new = 1;\n"
+[   19308 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   19312 ms] -stack-list-frames --thread 1
+[   19315 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   19316 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   19320 ms] ^error,msg="-var-create: unable to create variable object"
+[   19326 ms] -exec-continue
+[   19327 ms] ^running
+[   19328 ms] *running,thread-id="all"
+[   20456 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="13",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   20461 ms] ~"\n"
+[   20463 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   20464 ms] ~"37\t\t\ttime_new = 1;\n"
+[   20465 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   20470 ms] -stack-list-frames --thread 1
+[   20473 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   20473 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   20481 ms] ^error,msg="-var-create: unable to create variable object"
+[   20488 ms] -exec-continue
+[   20490 ms] ^running
+[   20490 ms] *running,thread-id="all"
+[   21618 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="14",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   21623 ms] ~"\n"
+[   21626 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   21627 ms] ~"37\t\t\ttime_new = 1;\n"
+[   21628 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   21632 ms] -stack-list-frames --thread 1
+[   21635 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   21635 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   21639 ms] ^error,msg="-var-create: unable to create variable object"
+[   21644 ms] -exec-continue
+[   21646 ms] ^running
+[   21646 ms] *running,thread-id="all"
+[   22774 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="15",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   22779 ms] ~"\n"
+[   22782 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   22783 ms] ~"37\t\t\ttime_new = 1;\n"
+[   22784 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   22788 ms] -stack-list-frames --thread 1
+[   22791 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   22791 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   22796 ms] ^error,msg="-var-create: unable to create variable object"
+[   22800 ms] -exec-continue
+[   22802 ms] ^running
+[   22803 ms] *running,thread-id="all"
+[   23930 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="16",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   23935 ms] ~"\n"
+[   23937 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   23938 ms] ~"37\t\t\ttime_new = 1;\n"
+[   23939 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   23942 ms] -stack-list-frames --thread 1
+[   23946 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   23946 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   23950 ms] ^error,msg="-var-create: unable to create variable object"
+[   23958 ms] -exec-continue
+[   23960 ms] ^running
+[   23961 ms] *running,thread-id="all"
+[   25089 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="17",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   25094 ms] ~"\n"
+[   25096 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   25097 ms] ~"37\t\t\ttime_new = 1;\n"
+[   25098 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   25102 ms] -stack-list-frames --thread 1
+[   25105 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   25105 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   25110 ms] ^error,msg="-var-create: unable to create variable object"
+[   25114 ms] -exec-continue
+[   25116 ms] ^running
+[   25116 ms] *running,thread-id="all"
+[   26244 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="18",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   26249 ms] ~"\n"
+[   26252 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   26253 ms] ~"37\t\t\ttime_new = 1;\n"
+[   26254 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   26256 ms] -stack-list-frames --thread 1
+[   26259 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   26259 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   26264 ms] ^error,msg="-var-create: unable to create variable object"
+[   26272 ms] -exec-continue
+[   26273 ms] ^running
+[   26274 ms] *running,thread-id="all"
+[   27406 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="19",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   27411 ms] ~"\n"
+[   27413 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   27414 ms] ~"37\t\t\ttime_new = 1;\n"
+[   27415 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   27419 ms] -stack-list-frames --thread 1
+[   27422 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   27423 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   27427 ms] ^error,msg="-var-create: unable to create variable object"
+[   27435 ms] -exec-continue
+[   27437 ms] ^running
+[   27437 ms] *running,thread-id="all"
+[   28564 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="20",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   28569 ms] ~"\n"
+[   28571 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   28572 ms] ~"37\t\t\ttime_new = 1;\n"
+[   28573 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   28580 ms] -stack-list-frames --thread 1
+[   28583 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   28583 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   28587 ms] ^error,msg="-var-create: unable to create variable object"
+[   28595 ms] -exec-continue
+[   28597 ms] ^running
+[   28597 ms] *running,thread-id="all"
+[   29725 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="21",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   29730 ms] ~"\n"
+[   29733 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   29734 ms] ~"37\t\t\ttime_new = 1;\n"
+[   29734 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   29738 ms] -stack-list-frames --thread 1
+[   29741 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   29742 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   29747 ms] ^error,msg="-var-create: unable to create variable object"
+[   29754 ms] -exec-continue
+[   29756 ms] ^running
+[   29757 ms] *running,thread-id="all"
+[   30885 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="22",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   30889 ms] ~"\n"
+[   30892 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   30893 ms] ~"37\t\t\ttime_new = 1;\n"
+[   30894 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   30897 ms] -stack-list-frames --thread 1
+[   30900 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   30903 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   30908 ms] ^error,msg="-var-create: unable to create variable object"
+[   30912 ms] -exec-continue
+[   30914 ms] ^running
+[   30914 ms] *running,thread-id="all"
+[   32043 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="23",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   32047 ms] ~"\n"
+[   32049 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   32051 ms] ~"37\t\t\ttime_new = 1;\n"
+[   32051 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   32054 ms] -stack-list-frames --thread 1
+[   32057 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   32058 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   32062 ms] ^error,msg="-var-create: unable to create variable object"
+[   32065 ms] -exec-continue
+[   32067 ms] ^running
+[   32068 ms] *running,thread-id="all"
+[   33200 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="24",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   33205 ms] ~"\n"
+[   33207 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   33209 ms] ~"37\t\t\ttime_new = 1;\n"
+[   33209 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   33212 ms] -stack-list-frames --thread 1
+[   33215 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   33215 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   33220 ms] ^error,msg="-var-create: unable to create variable object"
+[   33224 ms] -exec-continue
+[   33226 ms] ^running
+[   33226 ms] *running,thread-id="all"
+[   34354 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="25",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   34359 ms] ~"\n"
+[   34362 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   34363 ms] ~"37\t\t\ttime_new = 1;\n"
+[   34364 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   34369 ms] -stack-list-frames --thread 1
+[   34372 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   34372 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   34377 ms] ^error,msg="-var-create: unable to create variable object"
+[   34384 ms] -exec-continue
+[   34386 ms] ^running
+[   34386 ms] *running,thread-id="all"
+[   35514 ms] =breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="36",thread-groups=["i1"],times="26",original-location="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c:36"}
+[   35519 ms] ~"\n"
+[   35522 ms] ~"Breakpoint 2, SET_Anlog_Raw_init (in_voltage_raw=0, Number_of_times_to_read=20) at Analog_Input.c:37\n"
+[   35523 ms] ~"37\t\t\ttime_new = 1;\n"
+[   35524 ms] *stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x00400b84",func="SET_Anlog_Raw_init",args=[{name="in_voltage_raw",value="0"},{name="Number_of_times_to_read",value="20"}],file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},thread-id="1",stopped-threads="all",core="0"
+[   35529 ms] -stack-list-frames --thread 1
+[   35532 ms] ^done,stack=[frame={level="0",addr="0x00400b84",func="SET_Anlog_Raw_init",file="Analog_Input.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Analog_Input.c",line="37"},frame={level="1",addr="0x004011ac",func="main",file="Lighting_Control_For_The_Garden.c",fullname="/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden.c",line="62"}]
+[   35532 ms] -var-create --frame 0 --thread 1 - * "Standby_tim"
+[   35537 ms] ^error,msg="-var-create: unable to create variable object"
+[   35541 ms] -exec-continue
+[   35543 ms] ^running
+[   35544 ms] *running,thread-id="all"
+[   35891 ms] ~"\nProgram"
+[   35891 ms] ~" received signal SIGINT, Interrupt.\n"
+[   35893 ms] ~"0xb6dad3f4 in nanosleep () at ../sysdeps/unix/syscall-template.S:84\n"
+[   35894 ms] &"84\t../sysdeps/unix/syscall-template.S: No such file or directory.\n"
+[   35895 ms] *stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0xb6dad3f4",func="nanosleep",args=[],file="../sysdeps/unix/syscall-template.S",fullname="/build/glibc-NDbIcV/glibc-2.24/posix/../sysdeps/unix/syscall-template.S",line="84"},thread-id="1",stopped-threads="all",core="0"
+[   36028 ms] -gdb-exit
+[   36029 ms] ^exit

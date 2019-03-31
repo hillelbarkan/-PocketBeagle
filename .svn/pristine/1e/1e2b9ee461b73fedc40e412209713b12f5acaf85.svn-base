@@ -1,0 +1,14 @@
+﻿  VisualGDB: Run "rm -rf "/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Light_Control_test01/Light_Control_test0/VisualGDB/Debug"" in directory "" on root@10.0.0.10 (SSH)
+  VisualGDB: C:\projects\Lighting_Control_For_The_Garden\Light_Control_test01\Light_Control_test0 => /tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Light_Control_test01/Light_Control_test0: 6 files copied (11KB).
+  VisualGDB: Run "make -f "VisualGDB/Debug/Light_Control_test0.msbuild-mak" --no-print-directory" in directory "/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Light_Control_test01/Light_Control_test0" on root@10.0.0.10 (SSH)
+  make[1]: *** No rule to make target '../Gpio_init.c', needed by 'VisualGDB/Debug/Gpio_init.o'.  Stop.
+  VisualGDB/Debug/Light_Control_test0.msbuild-mak:13: recipe for target 'all' failed
+  make: *** [all] Error 2
+  -------------------------------------------------------------
+  Command exited with code 2
+  Executable: make
+  Arguments: -f "VisualGDB/Debug/Light_Control_test0.msbuild-mak" --no-print-directory
+  Directory: /tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Light_Control_test01/Light_Control_test0
+  VisualGDB: Error: Command-line action failed
+  VisualGDB: Error: Build has failed. See the Output window for more details.
+C:\Program Files (x86)\Sysprogs\VisualGDB\MSBuild\Targets\remote.targets(15,2): error : Build failed. Please examine the build output (View->Output) for details.

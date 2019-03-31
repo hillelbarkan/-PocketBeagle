@@ -1,0 +1,25 @@
+﻿  VisualGDB: C:\projects\Lighting_Control_For_The_Garden\Lighting_Control_For_The_Garden => /tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden: 7 files copied (19KB).
+  VisualGDB: Run "make -f "VisualGDB/Debug/Lighting_Control_For_The_Garden.msbuild-mak" --no-print-directory" in directory "/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden" on root@10.0.0.38 (SSH)
+  Lighting_Control_For_The_Garden.c
+  Lighting_Control_For_The_Garden.c(8):
+backlight.h(7,2): warning :  data definition has no type or storage class
+    Backlight_Backlight(unsigned int brightness);
+    ^~~~~~~~~~~~~~~~~~~
+backlight.h(7,2): warning :  type defaults to ‘int’ in declaration of ‘Backlight_Backlight’ [-Wimplicit-int]
+backlight.h(13,2): warning :  data definition has no type or storage class
+    Gat_actual_brightness();
+    ^~~~~~~~~~~~~~~~~~~~~
+backlight.h(13,2): warning :  type defaults to ‘int’ in declaration of ‘Gat_actual_brightness’ [-Wimplicit-int]
+  Lighting_Control_For_The_Garden.c: In function ‘Gpio_Check_Status’:
+Lighting_Control_For_The_Garden.c(42,11): warning :  comparison between pointer and integer
+    if (!dest=="/sys/class/gpio20")
+             ^~
+  Lighting_Control_For_The_Garden.c: In function ‘main’:
+Lighting_Control_For_The_Garden.c(75,26): warning :  passing argument 2 of ‘gpio_set_active_low’ makes pointer from integer without a cast [-Wint-conversion]
+    gpio_set_active_low(20, 1); /*‏configuring Gpio*/
+                            ^
+  Lighting_Control_For_The_Garden.c(5):
+  Gpio_set.h(34,5): note :  expected ‘char *’ but argument is of type ‘int’
+   int gpio_set_active_low(unsigned int gpio, char *active_low);
+       ^~~~~~~~~~~~~~~~~~~
+  Linking ../VisualGDB/Debug/Lighting_Control_For_The_Garden...

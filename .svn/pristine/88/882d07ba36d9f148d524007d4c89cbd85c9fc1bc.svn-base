@@ -1,0 +1,1 @@
+-o ../VisualGDB/Release/Lighting_Control_For_The_Garden -Wl,-gc-sections  -Wl,--start-group VisualGDB/Release/Analog_Input.o VisualGDB/Release/Gpio_init.o VisualGDB/Release/Lighting_Control_For_The_Garden.o -Wl,--rpath='$ORIGIN' -Wl,--end-group

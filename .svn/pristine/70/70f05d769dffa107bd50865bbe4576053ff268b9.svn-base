@@ -1,0 +1,3 @@
+﻿  VisualGDB: C:\projects\Lighting_Control_For_The_Garden\Lighting_Control_For_The_Garden => /tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden: 5 files copied (16KB).
+  VisualGDB: Run "make -f "VisualGDB/Debug/Lighting_Control_For_The_Garden.msbuild-mak" --no-print-directory" in directory "/tmp/VisualGDB/c/projects/Lighting_Control_For_The_Garden/Lighting_Control_For_The_Garden" on root@10.0.0.38 (SSH)
+  make[1]: Nothing to be done for 'build'.

@@ -1,0 +1,14 @@
+#pragma once
+/*
+ *Select in_voltage_raw 0 to 7 for The analog value 
+ * Number_of_times_to_read from 0 to 100 MAX
+ * Pause between reading anlog value Time_minutes_wait
+ **/
+int SET_Anlog_Raw_init(unsigned int in_voltage_raw, unsigned int Number_of_times_to_read );
+long int value_int;
+int sum;
+int Standby_time;
+int fd, len;
+int Current_time;
+FILE *fptr;
+int day;
