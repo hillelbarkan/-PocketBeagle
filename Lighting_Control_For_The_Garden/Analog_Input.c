@@ -23,6 +23,7 @@ int time_new =0;
 int Standby_time;
 int fd, len;
 int day;
+int result;
 /****************************************************************
  *in_voltage_raw
  ****************************************************************/
@@ -66,77 +67,154 @@ int SET_Anlog_Raw_init(unsigned int in_voltage_raw, unsigned int Number_of_times
 				printf("V \n");
 				fflush(stdout);
 				usleep(5000);
-				rewind(fd);
-				
-				
+					rewind(fd);
 				
 			} 
 		
 		
 	            	sum = sum / Number_of_times_to_read; 
-	/*	switch (day)
+		int logic_lvl = gpio_get_value(GpioPin);
+	//	int i = 0;
+		day = tm.tm_wday;
+		switch (day)
 		{
 		case 0:
-			if (system("mkdir -m 777 /home/Sunday"))
+			if ( result = mkdir("/home/Sunday", 0777)==0)
 			
-				fptr = fopen("/home/Sunday/Sunday_LogsForLight_Garden.txt", "a+");	
+			fptr = fopen("/home/Sunday/LogsForLight_Garden.txt", "a+");	
+		//	fprintf(fptr, "Daet Is:%02d-%02d-%2d Time Is:%02d:%02d:%02d|Sum is:%4d |The logical level=%1d |Number of samples:%2d \n", tm.tm_mday + 1, tm.tm_mon, tm.tm_year + 1900, tm.tm_hour, tm.tm_min+0, tm.tm_sec, sum, logic_lvl, average);
+			printf("Logs For Light_Garden Is print \n");
+			sleep(1);		
+			fclose(fptr);
+		
 			break;
 			
 		case 1:
-			if (system("mkdir -m 777 /home/Monday"))
+			if (result = mkdir("/home/Monday", 0777)==0)
+			{
+				fptr = fopen("/home/Monday/LogsForLight_Garden.txt", "a+");		
+			}
+				
+			else
+			{
+				fptr = fopen("/home/Monday/LogsForLight_Garden.txt", "a+");	
+				fprintf(fptr, "Daet Is:%02d-%02d-%2d Time Is:%02d:%02d:%02d|Sum is:%4d |The logical level=%1d |Number of samples:%2d \n", tm.tm_mday + 1, tm.tm_mon, tm.tm_year + 1900, tm.tm_hour, tm.tm_min, tm.tm_sec, sum, logic_lvl, average);
+				printf("Logs For Light_Garden Is print \n");
+				sleep(1);		
+				fclose(fptr);	
+			}
 			
-				fptr = fopen("/home/Monday/Monday_LogsForLight_Garden.txt", "a+");	
+		
 			break;
 		case 2:
-			if (system("mkdir -m 777  /home/Tuesday"))
 			
-				fptr = fopen("/home/Tuesday/Tuesda_LogsForLight_Garden.txt", "a+");	
+			if (result = mkdir("/home/Tuesda", 0777)==0)
+			{
+				fptr = fopen("/home/Tuesday/LogsForLight_Garden.txt", "a+");	
+			}
+				
+			else
+			{
+				fptr = fopen("/home/Thursday/LogsForLight_Garden.txt", "a+");
+				fprintf(fptr, "Daet Is:%02d-%02d-%2d Time Is:%02d:%02d:%02d|Sum is:%4d |The logical level=%1d |Number of samples:%2d \n", tm.tm_mday + 1, tm.tm_mon, tm.tm_year + 1900, tm.tm_hour, tm.tm_min, tm.tm_sec, sum, logic_lvl, average);
+				printf("Logs For Light_Garden Is print \n");
+				sleep(1);		
+				fclose(fptr);	
+			}
 			break;
 		case 3:
-			if (system("mkdir -m 777 /home/Wednesday"))
 			
-				fptr = fopen("/home/Wednesda/Wednesday_LogsForLight_Garden.txt", "a+");	
+			if (result = mkdir("/home/Wednesday", 0777)==0)
+			{
+				fptr = fopen("/home/Wednesda/LogsForLight_Garden.txt", "a+");	
+			}
+									
+			else
+			{
+				fptr = fopen("/home/Wednesday/LogsForLight_Garden.txt", "a+");
+				fprintf(fptr, "Daet Is:%02d-%02d-%2d Time Is:%02d:%02d:%02d|Sum is:%4d |The logical level=%1d |Number of samples:%2d \n", tm.tm_mday + 1, tm.tm_mon, tm.tm_year + 1900, tm.tm_hour, tm.tm_min, tm.tm_sec, sum, logic_lvl, average);
+				printf("Logs For Light_Garden Is print \n");
+				sleep(1);		
+				fclose(fptr);	
+			}
+				
+			
 			break;
+			
 		case 4:
-			if (system("mkdir -m 777 /home/Thursday"))
+			if (result = mkdir("/home/Thursday", 0777) == 0)
+		{
+			fptr = fopen("/home/Thursday/LogsForLight_Garden.txt", "a+");		
+		}
+				
 			
-				fptr = fopen("/home/Thursday/Thursday_LogsForLight_Garden.txt", "a+");	
+			else
+			{
+				fptr = fopen("/home/Thursday/LogsForLight_Garden.txt", "a+");
+				fprintf(fptr, "Daet Is:%02d-%02d-%2d Time Is:%02d:%02d:%02d|Sum is:%4d |The logical level=%1d |Number of samples:%2d \n", tm.tm_mday + 1, tm.tm_mon, tm.tm_year + 1900, tm.tm_hour, tm.tm_min, tm.tm_sec, sum, logic_lvl, average);
+				printf("Logs For Light_Garden Is print \n");
+				sleep(1);		
+				fclose(fptr);	
+			}
 			break;
-		case 5:
-			if (system("mkdir -m 777 /home/Friday"))
 			
-				fptr = fopen(" /home/Frida/Friday_LogsForLight_Garden.txt", "a+");	
+		case 5:
+		if (result = mkdir("/home/Friday", 0777)==0)
+		{
+			fptr = fopen(" /home/Friday/LogsForLight_Garden.txt", "a+");
+		}
+				
+			
+			else
+			{
+				fptr = fopen("/home/Friday/LogsForLight_Garden.txt", "a+");
+				fprintf(fptr, "Daet Is:%02d-%02d-%2d Time Is:%02d:%02d:%02d|Sum is:%4d |The logical level=%1d |Number of samples:%2d \n", tm.tm_mday + 1, tm.tm_mon, tm.tm_year + 1900, tm.tm_hour, tm.tm_min, tm.tm_sec, sum, logic_lvl, average);
+				printf("Logs For Light_Garden Is print \n");
+				sleep(1);		
+				fclose(fptr);	
+			}
 			break;
 		case 6:
-			if (system("mkdir -m 777 /home/Saturday"))
+			if (result = mkdir("/home/Saturday",0777)==0)
+		{
+			fptr = fopen("/home/Saturday/LogsForLight_Garden.txt", "a+");
+		}
+					
 			
-				fptr = fopen("/home/Saturday/Saturday_LogsForLight_Garden.txt", "a+");	
+			else
+			{
+				fptr = fopen("/home/Saturday/LogsForLight_Garden.txt", "a+");
+				fprintf(fptr, "Daet Is:%02d-%02d-%2d Time Is:%02d:%02d:%02d|Sum is:%4d |The logical level=%1d |Number of samples:%2d \n", tm.tm_mday-1 , tm.tm_mon, tm.tm_year + 1900, tm.tm_hour, tm.tm_min, tm.tm_sec, sum, logic_lvl, average);
+				printf("Logs For Light_Garden Is print \n");
+				sleep(1);		
+				fclose(fptr);	
+			}
 			break;
-		}*/
+		}
 		/************************************************************************************************************************************
 		* Generates a log named fptr = fopen ("/ home / debian / Desktop / LogsForLight_Garden.txt", "a"); To check the analog extensions
 		*************************************************************************************************************************************/
-		
+		/*
 		
 		fptr = fopen("/home/LogsForLight_Garden.txt", "a+");
-			if (fptr == NULL)
+		//	if (fptr == NULL)
 			{
 				printf("Could not create file LogsForLight_Garden.txt ");   
 				exit(1);             
 			}
-			int logic_lvl = gpio_get_value(GpioPin);
-		int i = 0;
+		//	int logic_lvl = gpio_get_value(GpioPin);
+		//int i = 0;
 	
 			time_t t = time(NULL);
 			struct tm tm = *localtime(&t);
 		
-		fprintf(fptr, "Time Is : %d:%d :%d: | Sum is :  %d |The logical level  %d |Number of samples : %d \n", tm.tm_hour, tm.tm_min, tm.tm_sec, sum, logic_lvl, average);
-		printf("Logs For Light_Garden Is print \n");
-		sleep(5);		
+		//fprintf(fptr, "Daet Is : %02d-%02d-%02d Time Is : %2d:%2d :%2d: | Sum is :  %4d |The logical level  %1d |Number of samples : %2d \n", tm.tm_mday+1, tm.tm_mon, tm.tm_year+1900, tm.tm_hour, tm.tm_min, tm.tm_sec, sum, logic_lvl, average);
+		//printf("Logs For Light_Garden Is print \n");
+		//sleep(1);		
 		fclose(fptr);
 			
 		//	printf("Average = %d\n", sum);
-	    
+	    */
 		gpio_fd_close(fd);
 		time_new = 0;
 		return sum; //average;

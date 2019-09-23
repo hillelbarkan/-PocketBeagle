@@ -4,21 +4,27 @@
 #include "Reading_Analog.h"
 #include "Gpio_set.h"
 #include <signal.h>
-#include <ulimit.h>
-#include "backlight.h"
+#include <sys/stat.h>
+//#include <prussdrv.h>
+//#include <pruss_intc_mapping.h>
+#include <pthread.h>
+#include <unistd.h>
+#define PRU_NUM 0
 int Current_time;
 int Screen = 0;
 char command[50];
 #define AnlogPin 4
 #define Gpio_Check ls/sys/class/gpio
-void sigintHandler(int sig_num) 
+void sigintHandler() 
 { 
 	/* Reset handler to catch SIGINT next time. 
 	   Refer http://en.cppreference.com/w/c/program/signal */
-	//signal(SIGTERM, gpio_set_value_0(20)); 
+	
+	gpio_set_value_0(20);
 	printf("\n terminated using Ctrl+C \n"); 
-	fflush(stdout); 
-} 
+	exit(exit);
+
+	} 
 
 int Gpio_Check_Status()
 {
@@ -39,7 +45,7 @@ int Gpio_Check_Status()
 	strcpy(dest, command);
 	
 	
-	if (!dest=="/sys/class/gpio20")
+	if (!dest== "/sys/class/gpio20")
 	{
 		gpio_export(20);	
 	}
@@ -54,23 +60,29 @@ void Clear_Screen()   /*Clear_Screen*/
 int main(int argc , char *argv[])
 {
 	
-	
+	//int result = mkdir("/home/test.txt", 0777);
+	//printf("/result %d\n", result);
+	int val = strtol(argv[1], NULL, 10);
+//	log4c_init();
 	//Gpio_Check_Status();
-//	signal(SIGTERM, gpio_set_value_0(20));
+	//signal(SIGVTALRM, sigintHandler);
 	SET_Anlog_Raw_init(AnlogPin, 30);
-	printf("Enter standby time between analogue radiation and valuesy from 1 to 60 \n ");
-	//Standby_time = argv;
-	scanf("%d", &Standby_time);
+	//	printf("Enter standby time between analogue radiation and valuesy from 1 to 60 \n ");
+		Standby_time = val;
+	//scanf("%d", &Standby_time);
 	printf("Time Standby_time : %d\n", Standby_time);
 //	strcpy(command, "chmod 777 /sys/class/gpio");  /*Allows full folder access*/
 //	system(command);
-//	sleep(1);
+	//sleep(1);
 	system("chmod 777 /sys/class/gpio");
 	//Current_time = str1;
 //	strcpy(command, "echo 20 > /sys/class/gpio/export");  /*Export Gpio*/
 //	system(command);
 	//gpio_export(20);
-	
+	if(gpio_get_value(20) == -1)
+	{
+		gpio_export(20);
+	}
 
 	gpio_set_active_low(20, 1); /*‏configuring Gpio*/
 	gpio_set_dir(20, 1);
@@ -78,10 +90,12 @@ int main(int argc , char *argv[])
 	fflush(stdout);
 	while (1)
 	{
+		
+		
 		time_t t = time(NULL);
 		struct tm tm = *localtime(&t);
-		printf("Time is : %d:%d:%d\n\r", tm.tm_hour, tm.tm_min, tm.tm_sec);
-		day = tm.tm_wday;
+		printf("Time is : %02d:%02d:%02d\n\r", tm.tm_hour, tm.tm_min, tm.tm_sec);
+	//	day = tm.tm_wday;
 	//	Screen++;
 		/*if (Screen == 2)
 		{
@@ -100,22 +114,25 @@ int main(int argc , char *argv[])
 		/****************************************************************
 		* Set ON The light in the garden works Night mode\n Logic = "0"
 		****************************************************************/
-		if ((tm.tm_hour <= 5 && tm.tm_hour >= 0) || (tm.tm_hour >= 18 && tm.tm_min>=10 && tm.tm_hour <= 23))
+		if ((tm.tm_hour <= 5 && tm.tm_hour >= 0) || (tm.tm_hour >= 18 &&  tm.tm_hour <= 23))
 		{
 			printf("Light is ON Night mode :  %d \n\r ", gpio_get_value(20));
 			SET_Anlog_Raw_init(AnlogPin, 20);
 			printf("Sum is :  %d \n\r ", sum);
-			if (sum < 2000)
+			if (sum < 1000)
 			{
+				int taim_set_on;
+				
 				if (!gpio_get_value(20))   /*provide writing gpio mode more than one time*/
 				{
 					gpio_set_value_1(20);
+					
 					printf("Light is ON :  %d \n\r", gpio_get_value(20));
-				//	Backlight_Backlight(60);
+				
 				}
 			}
 		}
-	
+		
 		/***********************************************************************
 		*  Set OFF Day mode The light in the garden does not work Logic = "1"
 		************************************************************************/	
@@ -132,6 +149,7 @@ int main(int argc , char *argv[])
 				if (gpio_get_value(20)) /*provide writing gpio mode more than one timeq*/
 				{
 					gpio_set_value_0(20);
+					
 					printf("Light is OFF :  %d \n\r", gpio_get_value(20));
 				//	Backlight_Backlight(80);
 					
